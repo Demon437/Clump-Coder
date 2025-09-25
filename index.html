@@ -357,12 +357,31 @@ header .fa-sun,
 
 
 
+/* ...existing code... */
+
+/* Light mode: Our Technology Stack section para text black */
+.light-mode #technologies p,
+.light-mode #technologies .text-white {
+    color: #000 !important;
+}
+
+/* ...existing code... */
+
+
+
 
 /* ...existing code... */
 </style>
 </head>
 
 <body class="bg-black text-gray-900 bg-black" style="width: 100%;">
+    <!-- Light mode animation indicator -->
+    <div id="light-mode-indicator" style="display:none; position:fixed; top:30px; left:50%; transform:translateX(-50%); z-index:9999;">
+        <div style="background:#fff; color:#222; border-radius:30px; box-shadow:0 2px 16px #0002; padding:10px 32px; font-weight:bold; font-size:1.1rem; display:flex; align-items:center; gap:10px; animation:fadeSlideDown 1s;">
+            <i class="fas fa-sun fa-lg" style="color:#fbbf24;"></i>
+            Light Mode Enabled
+        </div>
+    </div>
 
     <!-- Header -->
   <!-- ...existing code... -->
@@ -399,11 +418,17 @@ header .fa-sun,
     // Theme toggle
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
+    const lightModeIndicator = document.getElementById('light-mode-indicator');
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('light-mode');
         if (document.body.classList.contains('light-mode')) {
             themeIcon.classList.remove('fa-moon');
             themeIcon.classList.add('fa-sun');
+            // Show light mode animation
+            lightModeIndicator.style.display = 'block';
+            setTimeout(() => {
+                lightModeIndicator.style.display = 'none';
+            }, 1200);
         } else {
             themeIcon.classList.remove('fa-sun');
             themeIcon.classList.add('fa-moon');
@@ -642,7 +667,7 @@ header .fa-sun,
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="Images/Copilot.jpg" alt="Copilot logo representing AI-assisted programming"
+                    <img src="media/390e8e1aec739b20de9bd28d458b5592-removebg-preview.png" alt="Copilot logo representing AI-assisted programming"
                         class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Copilot</h3>
                     <p class="text-sm text-white mt-2">Programming language</p>
@@ -650,126 +675,126 @@ header .fa-sun,
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/web 4.0.png" alt="Web 4.0 logo" class="service-logo border-0 shadow-none">
+                    <img src="media/web_4.0-removebg-preview.png" alt="Web 4.0 logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Web 4.0</h3>
                     <p class="text-sm text-white mt-2">Programming language</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="Images/buildspace.png" alt="buildSpace logo" class="service-logo border-0 shadow-none">
+                    <img src="media/Screenshot_2025-09-25_150513-removebg-preview.png" alt="buildSpace logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">buildSpace</h3>
                     <p class="text-sm text-white mt-2">Programming language</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/uizer.png" alt="Uizer logo" class="service-logo border-0 shadow-none">
+                    <img src="media/uizer-removebg-preview.png" alt="Uizer logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Uizer</h3>
                     <p class="text-sm text-white mt-2">Programming language</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/react.jpg" alt="React logo" class="service-logo border-0 shadow-none">
+                    <img src="media/react-removebg-preview.png" alt="React logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">React.js</h3>
                     <p class="text-sm text-white mt-2">Frontend framework</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/python.jpg" alt="Python logo" class="service-logo border-0 shadow-none">
+                    <img src="media/python-removebg-preview.png" alt="Python logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Python</h3>
                     <p class="text-sm text-white mt-2">Programming language</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/java.jpg" alt="Java logo" class="service-logo border-0 shadow-none">
+                    <img src="media/java-removebg-preview.png" alt="Java logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Java</h3>
                     <p class="text-sm text-white mt-2">Programming language</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="Images/Wordpress.webp" alt="WordPress logo" class="service-logo border-0 shadow-none">
+                    <img src="media/Screenshot_2025-09-25_124858-removebg-preview.png" alt="WordPress logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">WordPress</h3>
                     <p class="text-sm text-white mt-2">CMS platform</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/tensorflow.jpg" alt="TensorFlow logo" class="service-logo border-0 shadow-none">
+                    <img src="media/tensorflow-removebg-preview.png" alt="TensorFlow logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">TensorFlow</h3>
                     <p class="text-sm text-white mt-2">ML framework</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/docker.jpg" alt="Docker logo" class="service-logo border-0 shadow-none">
+                    <img src="media/docker-removebg-preview.png" alt="Docker logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Docker</h3>
                     <p class="text-sm text-white mt-2">Containerization</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/kuber.jpg" alt="Kubernetes logo" class="service-logo border-0 shadow-none">
+                    <img src="media/kuber-removebg-preview.png" alt="Kubernetes logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Kubernetes</h3>
                     <p class="text-sm text-white mt-2">Orchestration tool</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/mongo.jpg" alt="MongoDB logo" class="service-logo border-0 shadow-none">
+                    <img src="media/mongo-removebg-preview.png" alt="MongoDB logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">MongoDB</h3>
                     <p class="text-sm text-white mt-2">NoSQL database</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/shopify.jpg" alt="Shopify logo" class="service-logo border-0 shadow-none">
+                    <img src="media/shopify-removebg-preview.png" alt="Shopify logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Shopify</h3>
                     <p class="text-sm text-white mt-2">E-commerce platform</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/A.jpg" alt="Angular logo" class="service-logo border-0 shadow-none">
+                    <img src="media/A-removebg-preview.png" alt="Angular logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Angular</h3>
                     <p class="text-sm text-white mt-2">Framework</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center  transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/SQL.jpg" alt="SQL Server logo" class="service-logo border-0 shadow-none">
+                    <img src="media/SQL-removebg-preview.png" alt="SQL Server logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">SQL Server</h3>
                     <p class="text-sm text-white mt-2">Database</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="https://i.pinimg.com/1200x/81/53/7d/81537d4d5b76f89d653db2bed33b85ed.jpg" alt="Vue.js logo" class="service-logo border-0 shadow-none">
+                    <img src="media/WhatsApp_Image_2025-09-25_at_12.35.46_ad19e65c-removebg-preview.png" alt="Vue.js logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Vue.js</h3>
                     <p class="text-sm text-white mt-2">Framework</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/AZ.jpg" alt="Azure logo" class="service-logo border-0 shadow-none">
+                    <img src="media/AZ-removebg-preview.png" alt="Azure logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Azure</h3>
                     <p class="text-sm text-white mt-2">Cloud platform</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="media/git.jpg" alt="Git logo" class="service-logo border-0 shadow-none">
+                    <img src="media/OIP-removebg-preview - Copy.png" alt="Git logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Git&Hub</h3>
                     <p class="text-sm text-white mt-2">Version control</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="Images/DataProcessing.webp" alt="Data Processing logo"
+                    <img src="media/Screenshot_2025-09-25_123244-removebg-preview.png" alt="Data Processing logo"
                         class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Data Processing</h3>
                     <p class="text-sm text-white mt-2">Big data frameworks</p>
@@ -777,14 +802,14 @@ header .fa-sun,
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="Images/Blockchain.webp" alt="Blockchain logo" class="service-logo border-0 shadow-none">
+                    <img src="media/OIP__1_-removebg-preview.png" alt="Blockchain logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Blockchain</h3>
                     <p class="text-sm text-white mt-2">Distributed ledger</p>
                 </div>
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="Images/react-native-1024x631.webp" alt="React Native logo"
+                    <img src="media/react-removebg-preview.png" alt="React Native logo"
                         class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">React Native</h3>
                     <p class="text-sm text-white mt-2">Mobile framework</p>
@@ -792,7 +817,7 @@ header .fa-sun,
 
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
-                    <img src="Images/images flutter.png" alt="Flutter logo" class="service-logo border-0 shadow-none">
+                    <img src="media/Screenshot_2025-09-25_124834-removebg-preview.png" alt="Flutter logo" class="service-logo border-0 shadow-none">
                     <h3 class="text-lg font-semibold text-blue-500">Flutter</h3>
                     <p class="text-sm text-white mt-2">Mobile framework</p>
                 </div>
