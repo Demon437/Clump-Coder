@@ -366,11 +366,30 @@ header .fa-sun,
 }
 
 /* ...existing code... */
+.tech-item {
+    border: 0.1px solid gray-100;
+    padding: 1rem !important;      /* Reduce padding */
+    min-height: 210px;             /* Set a lower min-height if needed */
+    height: 220px;                 /* Set a fixed height for uniformity */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.tech-item .service-logo {
+    width: 100px !important;       /* Reduce image size */
+    height: 100px !important;
+    margin-bottom: 0.5rem;
+}
 
 
 
+.light-mode #technologies p,
+.light-mode #technologies .text-white {
+    color: white !important;
+}
 
-/* ...existing code... */
+
 </style>
 </head>
 
@@ -683,7 +702,7 @@ header .fa-sun,
                 <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
                     data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
                     <img src="media/Screenshot_2025-09-25_150513-removebg-preview.png" alt="buildSpace logo" class="service-logo border-0 shadow-none">
-                    <h3 class="text-lg font-semibold text-blue-500">buildSpace</h3>
+                    <h3 class="text-lg font-semibold text-blue-500">buildScape</h3>
                     <p class="text-sm text-white mt-2">Programming language</p>
                 </div>
 
