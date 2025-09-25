@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ClumpCoder IT Solutions - IT Company</title>
+    <link rel="icon" type="image/jpeg" href="/images/CompanyIcon.jpeg" />
+    <link rel="icon" href="ll.jpeg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add this inside <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: #111;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('images/Clumbcoder.mp4');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .imgBackgnd {
+            background-color: rgb(196, 193, 199);
+        }
+
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card-one {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-logo {
+            width: 170px;
+            height: 170px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgb(159, 159, 159);
+        }
+
+        .service-card {
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .fade-in {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .testimonial-slider {
+            overflow: hidden;
+        }
+
+        .testimonial-slide {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+
+        .tech-item {
+            border: 0.1px solid gray-100;
+        }
+
+        .tech-item:hover {
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgb(159, 159, 159);
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            80% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+
+        .fade-in-out {
+            animation: fadeInOut 2s ease-in-out infinite;
+        }
+ .p-4 {
+        padding: 0.5rem !important;
+        background-color: #22223b; /* Theme-based dark background */
+        color: #f8f8f2;            /* Theme-based light text */
+        border-radius: 0.5rem;     /* Optional: for a modern look */
+    }
+     .imgBackgnd {
+          background-color: blue !important;
+    }
+    </style>
+</head>
+
+<body class="bg-black text-gray-900 bg-black" style="width: 100%;">
+
+    <!-- Header -->
+    <header class="bg-transparent shadow-md fixed w-full z-20 backdrop-blur-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="Images/CompanyIcon.jpeg" alt="ClumpCoder Solutions logo" class="h-10 w-10">
+                <h1 class="text-2xl font-bold bg-clip-text text-blue-400">
+                    ClumpCoder
+                </h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-blue-600 transition"><b>Home</b></a>
+                <a href="#services" class="text-white hover:text-blue-600 transition"><b>Services</b></a>
+                <a href="#about" class="text-white hover:text-blue-600 transition"><b>About</b></a>
+                <a href="#portfolio" class="text-white hover:text-blue-600 transition"><b>Portfolio</b></a>
+                <a href="career.html" class="text-white hover:text-blue-600 transition"><b>Career</b></a>
+                <a href="#contact" class="text-white hover:text-blue-600 transition"><b>Contact</b></a>
+            </nav>
+            <button id="mobile-menu-toggle" class="md:hidden text-white">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-80 backdrop-blur-md">
+            <a href="#home" class="block text-center text-white hover:text-blue-600 transition py-3"><b>Home</b></a>
+            <a href="#services"
+                class="block text-center text-white hover:text-blue-600 transition py-3"><b>Services</b></a>
+            <a href="#about" class="block text-center text-white hover:text-blue-600 transition py-3"><b>About</b></a>
+            <a href="#portfolio"
+                class="block text-center text-white hover:text-blue-600 transition py-3"><b>Portfolio</b></a>
+            <a href="career.html"
+                class="block text-center text-white hover:text-blue-600 transition py-3"><b>Career</b></a>
+            <a href="#contact"
+                class="block text-center text-white hover:text-blue-600 transition py-3"><b>Contact</b></a>
+        </div>
+    </header>
+
+
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden"
+        style="background-color:#111">
+        <!-- Full-screen background video for immersive tech experience -->
+        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0 tech-video">
+            <source src="images/Clumbcoder.mp4" type="video/mp4" />
+            <!-- Fallback description for technology-themed background video -->
+            Your browser does not support the video tag. This is a technology-themed background video showcasing
+            advanced computer circuits, flowing data streams, animated software code, cloud architecture icons, and AI
+            neural network patterns to embody cutting-edge IT innovations, digital workflows, and futuristic tech
+            developments for an engaging homepage experience.
+        </video>
+
+        <!-- Semi-transparent overlay for text readability and stylish effect -->
+        <div
+            class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black; via-transparent to-black opacity-60 z-10">
+        </div>
+
+        <!-- Content layered on top of the background video -->
+        <div
+            class="relative z-10 text-center text-white p-6 bg-gray-50 bg-opacity-10 rounded-lg max-w-2xl mx-auto animate-fadeInUp">
+            <h1 class="text-4xl font-extrabold mb-4 drop-shadow-lg fade-in-out color">
+                ClumpCoder is a multi-faceted tech company focused on web, mobile, e-commerce, and AI development
+                solutions
+            </h1>
+
+            </h1>
+            <p class="text-lg mb-6 drop-shadow-md">We build more than technology—we build momentum.
+                At our core, we’re an IT powerhouse dedicated to transforming businesses with future-ready digital
+                solutions. Our work is designed to empower brands, accelerate growth, and set new standards of
+                innovation that separate you from the competition.</p>
+            <!-- <a href="#contact"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">Get
+                Started Now</a> -->
+        </div>
+    </section>
+    <!-- <section id="home" class="hero min-h-screen flex items-center justify-center text-white pt-20">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <h2 class="text-5xl font-bold mb-4">Innovating Tomorrow's Technology Today</h2>
+            <p class="text-xl mb-8">Leading IT solutions for businesses worldwide, from cloud computing to
+                cybersecurity.</p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full btn-hover">Get
+                    Started</button>
+                <button
+                    class="border border-white text-white px-8 py-3 rounded-full btn-hover hover:bg-white hover:text-blue-600">Learn
+                    More</button>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-black mt-5" style="background-color:#111;" data-aos="fade-left"
+        data-aos-delay="250" data-aos-duration="1000">
+        <div class="container text-center mx-auto px-4">
+            <h6 class="text-2xl font-bold text-center mb-8 border-b-4 border-green-500 inline-block pb-1 bg-gray-100; from-blue-500 via-purple-500 to-pink-500 
+           bg-clip-text text-white">Our Services</h6>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- <div class="service-card-one p-6 text-center">
+                    <i class="fas fa-cloud text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Cloud Solutions</h4>
+                    <p>Scalable cloud infrastructure and migration services for seamless operations.</p>
+                </div> -->
+
+           <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+    transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+    <i class="fas fa-cloud text-4xl text-blue-600 mb-4 transition duration-300"></i>
+    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">
+        Cloud Solutions
+    </h4>
+    <p class="text-white transition duration-300 group-hover:scale-110">
+        Scalable cloud infrastructure and migration services for seamless operations.
+    </p>
+</div>
+
+                <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+            transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+                    <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4 transition duration-300"></i>
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">Cybersecurity
+                    </h4>
+                    <p class="text-white transition duration-300 group-hover:scale-110">Advanced protection against
+                        threats with cutting-edge security protocols.</p>
+                </div>
+                <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+            transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+                    <i class="fas fa-code text-4xl text-blue-600 mb-4 transition duration-300"></i>
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">Software
+                        Development</h4>
+                    <p class="text-white transition duration-300 group-hover:scale-110">Custom software tailored to
+                        your business needs using modern technologies.</p>
+                </div>
+                <!-- <div class="service-card-one p-6 text-center">
+                    <i class="fas fa-database text-4xl text-blue-600 mb-4"></i>
+                    <h4 class="text-xl font-semibold mb-2">Data Analytics</h4>
+                    <p>Transform data into insights with AI-driven analytics platforms.</p>
+                </div> -->
+                <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+            transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+                    <i class="fas fa-database text-4xl text-blue-600 mb-4 transition duration-300"></i>
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">AI & Machine
+                        Learning</h4>
+                    <p class="text-white transition duration-300 group-hover:scale-110">Intelligent automation and
+                        predictive modeling for smarter decisions.</p>
+                </div>
+                <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+            transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+                    <i class="fas fa-robot text-4xl text-blue-600 mb-4 transition duration-300"></i>
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">Mobile
+                        Application</h4>
+                    <p class="text-white transition duration-300 group-hover:scale-110">In today’s digital era, mobile
+                        applications have become an integral part of everyday life.</p>
+                </div>
+                <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+            transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+                    <i class="fas fa-network-wired text-4xl text-blue-600 mb-4 transition duration-300"></i>
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">Web Application
+                    </h4>
+                    <p class="text-white transition duration-300 group-hover:scale-110">Web applications are powerful
+                        tools that allow businesses to provide services and solutions
+                        directly through browsers without the need for installation.</p>
+                </div>
+                <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+            transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+                    <i class="fas fa-cubes text-5xl text-blue-600 mb-4 transition duration-300"></i>
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">Augmented Reality</h4>
+                    <p class="text-white transition duration-300 group-hover:scale-110">At Augmented Reality, we believe
+                        that finding the perfect property is more than just a transaction –
+                        it’s about building dreams and creating value.</p>
+                </div>
+                <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+            transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+                    <i class="fas fa-vr-cardboard text-4xl text-blue-600 mb-4 transition duration-300 "></i>
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">Virtual Reality
+                    </h4>
+                    <p class="text-white transition duration-300 group-hover:scale-110">At Virtual Realty, we combine
+                        technology and innovation to redefine the real estate experience.
+                    </p>
+                </div>
+                <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
+            transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+                    <i class="fas fa-bullhorn text-4xl text-blue-600 mb-4 transition duration-300"></i>
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">Digital Marketing
+                    </h4>
+                    <p class="text-white transition duration-300 group-hover:scale-110">Digital Marketing helps
+                        businesses reach the right audience, build brand awareness, and drive
+                        measurable results through strategies like SEO, social media, content marketing, email
+                        campaigns, and paid advertising.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- <section id="about" class="py-5" style="background-color: #ffffff;">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center ">
+                <div class="lg:w-1/2 mb-6 lg:mb-0">
+                    <img src="Images/About.webp"
+                        alt="Modern office space with diverse team collaborating on computers surrounded by innovative tech gadgets and light-colored furniture"
+                        class="rounded-lg shadow-md"
+                        data-aos="fade-left" data-aos-delay="150" data-aos-duration="1000"  style="height: 400px; width: 100%; object-fit: cover;"  >
+                </div>
+                <div class="lg:w-1/2 lg:pl-8 text-center">
+                    <h3 class="text-2xl font-bold mb-6 text-center border-b-4 border-green-500 inline-block pb-2 bg-lightblue from-blue-500 via-purple-500 to-pink-500 
+           bg-clip-text text-transparent" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">About Clumpcoder IT Solutions</h3>
+                    <p class="text-md mb-4 fade-in" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">ClumpCoder is a multi-faceted tech company focused on web, mobile, e-commerce, and AI development solutions, boasting a small but dynamic team of approximately 15 professionals, including web developers, mobile developers, AI developers, designers, and testers. Their vision is centered around achieving 100% customer satisfaction by delivering top-notch products and services at competitive prices, with the goal of becoming the premier choice in computing and information technology services, consultancy, and development through a comprehensive service offering. he Technologies on which we work on:
+
+- Web/ Mobile Technologies: 
+ Python, PHP, React js, Angular js, React Native, Android, Flutter, HTML, CSS, Javascript, My SQL, 
+MongoDB, AWS, Git 
+
+- Artificial Intelligence: 
+ ML, Computer Vision, OpenCV, pandas, Numpy, Scikit learn, Chatterbot, Tensor Flow
+
+- Task Management Tool: 
+ Jira, Asana, Trello, Basecamp etc.</p>
+                   
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded btn-hover">Read
+                        More</button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="about" class="py-5 bg-black-800 mt-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-6 lg:mb-1">
+                    <img src="images/abt.jpg"
+                        alt="Modern office space with diverse team collaborating on computers surrounded by innovative tech gadgets and light-colored furniture"
+                        class="rounded-lg shadow-md" data-aos="fade-left" data-aos-delay="150" data-aos-duration="1000"
+                        style="height: 450px; width: 100%;  object-fit: cover;">
+                </div>
+                <div class="lg:w-1/2 lg:pl-8 text-center">
+                    <h3 class="text-2xl font-bold mb-6 text-center  border-b-4 border-green-500 inline-block pb-1 bg-gray-100 from-blue-500 via-purple-500 to-pink-500 
+           bg-clip-text text-white">
+                        About Us
+                    </h3>
+                    <p class="text-md mb-4 fade-in text-white" data-aos="fade-up" data-aos-delay="250"
+                        data-aos-duration="1000">
+                        ClumpCoder is a multi-faceted tech company focused on web, mobile, e-commerce, and AI
+                        development solutions, boasting small but dynamic team including web developers, Mobile
+                        developers, AI developers, designers, and testers. Their vision is centered around achieving
+                        100% customer satisfaction by delivering top-notch
+                        products and services at competitive prices, with the goal of becoming the premier choice in
+                        computing and information
+                        technology services, consultancy, and development through a comprehensive service offering.
+                    </p>
+                    <p class="text-white">
+                        ClumpCoder's mission is to
+                        empower individuals, fostering a culture of fairness, integrity, and empathy within their team,
+                        and seeking out
+                        like-minded individuals who share these values to join their ranks. he Technologies on which we
+                        work on: - Web/ Mobile
+                        Technologies: Python, PHP, React js, Angular js, React Native, Android, Flutter, HTML, CSS,
+                        Javascript, My SQL, MongoDB,
+                        AWS, Git - Artificial Intelligence: ML, Computer Vision, OpenCV, pandas, Numpy, Scikit learn,
+                        Chatterbot, Tensor Flow -
+                        Task Management Tool: Jira, Asana, Trello, Basecamp etc
+                    </p>
+
+                    <!-- Read More button -->
+                    <!-- <button onclick="openPopup()"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded btn-hover">
+                        Read More
+                    </button> -->
+                    <!-- <button class="read-more-btn bg-blue-600 hover:bg:blue-700 text-white px-6 py-3 rounded btn-hover" -->
+                    <!-- data-title="Clumpcoder IT Solutions" data-content="ClumpCoder is a multi-faceted tech company focused on web, mobile,
+                        e-commerce, and AI development solutions, boasting a
+                        small but dynamic team of approximately 15 professionals, including web developers, mobile
+                        developers, AI developers,
+                        designers, and testers. Their vision is centered around achieving 100% customer satisfaction by
+                        delivering top-notch
+                        products and services at competitive prices, with the goal of becoming the premier choice in
+                        computing and information
+                        technology services, consultancy, and development through a comprehensive service offering."> -->
+                    <!-- Read More -->
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Popup Modal -->
+    <!-- <div id="popupOverlay" class="fixed inset-0 bg-lightblue bg-opacity-60 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-11/12 md:w-2/3 lg:w-1/2 relative">
+            <span id="closePopup" class="absolute top-3 right-4 text-2xl cursor-pointer">&times;</span>
+            <h2 id="popupTitle" class="text-xl font-bold mb-4"></h2>
+            <p id="popupContent" class="text-gray-700 text-sm leading-relaxed"></p>
+        </div>
+    </div> -->
+
+
+
+    <!-- <script>
+        // Select elements
+        const popupOverlay = document.getElementById("popupOverlay");
+        const popupTitle = document.getElementById("popupTitle");
+        const popupContent = document.getElementById("popupContent");
+        const closePopupBtn = document.getElementById("closePopup");
+
+        // Open popup
+        document.querySelectorAll(".read-more-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                popupTitle.innerText = button.dataset.title;
+                popupContent.innerText = button.dataset.content;
+
+                popupOverlay.classList.remove("hidden");
+                popupOverlay.classList.add("flex");
+            });
+        });
+
+        // Close popup
+        closePopupBtn.addEventListener("click", () => {
+            popupOverlay.classList.remove("flex");
+            popupOverlay.classList.add("hidden");
+        });
+
+        // Click outside popup to close
+        popupOverlay.addEventListener("click", (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove("flex");
+                popupOverlay.classList.add("hidden");
+            }
+        });
+    </script> -->
+
+    <!-- Technology Section -->
+    <!-- Technology Section -->
+    <section id="technologies" class="py-10 px-6 bg-black-800 -mt-2" style="background-color:#111;">
+        <div class="max-w-7xl text-center mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-10 animate-fadeInUp bg-gray-100 from-blue-500 via-purple-500 to-pink-500 
+           bg-clip-text text-white border-b-4 border-green-500 inline-block pb-1">
+                Our Technology Stack
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 ">
+
+                <div class="tech-item bg-gray-900 backdrop-blur-lg shadow-lg p-6 rounded-lg text-center hover:bg-gray-250 transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+
+                    <!-- <div class="tech-item 
+            bg-white/50 backdrop-blur-xxl border border-white/20 
+            shadow-none p-6 rounded-lg text-center 
+            transition-all duration-300 
+            hover:bg-white/30 hover:backdrop-blur-lg hover:shadow-lg hover:border-white/30 
+            hover:-translate-y-2" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000"> -->
+
+                    <img src="media/nodejs.png"
+                        alt="Node.js logo with hexagon emblem in green for server-side JavaScript runtime"
+                        class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Node.js</h3>
+                    <p class="text-sm text-white mt-2">Runtime environment</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/5ae1feee68f62e9824934f1ea4e85064.jpg"
+                        alt="AWS icon with orange circles for cloud computing services and infrastructure"
+                        class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">AWS</h3>
+                    <p class="text-sm mt-2 text-white">Cloud platform</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="Images/Copilot.jpg" alt="Copilot logo representing AI-assisted programming"
+                        class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Copilot</h3>
+                    <p class="text-sm text-white mt-2">Programming language</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/web 4.0.png" alt="Web 4.0 logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Web 4.0</h3>
+                    <p class="text-sm text-white mt-2">Programming language</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="Images/buildspace.png" alt="buildSpace logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">buildSpace</h3>
+                    <p class="text-sm text-white mt-2">Programming language</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/uizer.png" alt="Uizer logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Uizer</h3>
+                    <p class="text-sm text-white mt-2">Programming language</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/react.jpg" alt="React logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">React.js</h3>
+                    <p class="text-sm text-white mt-2">Frontend framework</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/python.jpg" alt="Python logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Python</h3>
+                    <p class="text-sm text-white mt-2">Programming language</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/java.jpg" alt="Java logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Java</h3>
+                    <p class="text-sm text-white mt-2">Programming language</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="Images/Wordpress.webp" alt="WordPress logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">WordPress</h3>
+                    <p class="text-sm text-white mt-2">CMS platform</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/tensorflow.jpg" alt="TensorFlow logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">TensorFlow</h3>
+                    <p class="text-sm text-white mt-2">ML framework</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/docker.jpg" alt="Docker logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Docker</h3>
+                    <p class="text-sm text-white mt-2">Containerization</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/kuber.jpg" alt="Kubernetes logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Kubernetes</h3>
+                    <p class="text-sm text-white mt-2">Orchestration tool</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/mongo.jpg" alt="MongoDB logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">MongoDB</h3>
+                    <p class="text-sm text-white mt-2">NoSQL database</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/shopify.jpg" alt="Shopify logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Shopify</h3>
+                    <p class="text-sm text-white mt-2">E-commerce platform</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/A.jpg" alt="Angular logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Angular</h3>
+                    <p class="text-sm text-white mt-2">Framework</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center  transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/SQL.jpg" alt="SQL Server logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">SQL Server</h3>
+                    <p class="text-sm text-white mt-2">Database</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="https://i.pinimg.com/1200x/81/53/7d/81537d4d5b76f89d653db2bed33b85ed.jpg" alt="Vue.js logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Vue.js</h3>
+                    <p class="text-sm text-white mt-2">Framework</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/AZ.jpg" alt="Azure logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Azure</h3>
+                    <p class="text-sm text-white mt-2">Cloud platform</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="media/git.jpg" alt="Git logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Git&Hub</h3>
+                    <p class="text-sm text-white mt-2">Version control</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="Images/DataProcessing.webp" alt="Data Processing logo"
+                        class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Data Processing</h3>
+                    <p class="text-sm text-white mt-2">Big data frameworks</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="Images/Blockchain.webp" alt="Blockchain logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Blockchain</h3>
+                    <p class="text-sm text-white mt-2">Distributed ledger</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="Images/react-native-1024x631.webp" alt="React Native logo"
+                        class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">React Native</h3>
+                    <p class="text-sm text-white mt-2">Mobile framework</p>
+                </div>
+
+                <div class="tech-item bg-gray-900 p-6 rounded-lg text-center transition-colors border-0 shadow-none hover:-translate-y-2 transition-transform duration-300"
+                    data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                    <img src="Images/images flutter.png" alt="Flutter logo" class="service-logo border-0 shadow-none">
+                    <h3 class="text-lg font-semibold text-blue-500">Flutter</h3>
+                    <p class="text-sm text-white mt-2">Mobile framework</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-10 bg-black-800 -mt-6" style="background-color: #111;" data-aos="fade-left"
+        data-aos-delay="250" data-aos-duration="1000">
+        <div class="container text-center mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-12 bg-black-800 from-blue-500 via-purple-500 to-pink-500 
+           bg-clip-text text-white border-b-4 border-green-500 inline-block pb-1">Our Portfolio</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+           
+
+                <a href="kuhoo.html" class="block">
+                    <div
+                        class="project-card bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <div class="imgBackgnd">
+                            <img src="Images/image 1.jpg" alt="Kuhoo Online Education"
+                                class="p-4 object-contain max-h-full">
+
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-500">KUHOO - Online Education</h4>
+                            <p class="text-white">
+                                At Kuhoo, we believe that providing the right loan at the right time can
+                                positively transform not just the life of a student but also uplift their entire
+                                family.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href="educationacadmy.html" class="block">
+                    <div class="project-card bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105
+            transition-transform duration-300 ease-in-out">
+                        <div class="imgBackgnd">
+                            <img src="Images/eacadmy 2.0.jpg"
+                                alt="Healthcare management system interface with patient records and appointment scheduler in soothing colors"
+                                class="p-4 object-contain">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-500">Eduacademy</h4>
+                            <p class="text-white">~Enhanced Efficiency in school operations.
+                                ~High Client Satisfaction with robust features.
+                                ~Market Recognition as a trusted ERP solution.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="invoiceapp.html">
+                    <div class="project-card bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105
+            transition-transform duration-300 ease-in-out">
+
+                        <div class="imgBackgnd">
+                            <img src="Images/WQ invoice appp.jpg"
+                                alt="E-learning platform homepage with course catalogs, student progress tracking, and interactive elements"
+                                class="p-4 object-contain">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-500">WQ Invoice App</h4>
+                            <p class="text-white">Easy Invoice App – Generate and send professional PDF invoices and
+                                draft orders. Customize templates with your logo and store details, bulk print/export,
+                                and automate.</p>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                <a href="trilungal.html">
+                    <div class="project-card bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105
+            transition-transform duration-300 ease-in-out">
+                        <div class="imgBackgnd">
+                            <img src="Images/kids.jpg"
+                                alt="E-learning platform homepage with course catalogs, student progress tracking, and interactive elements"
+                                class="p-4 object-contain">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-500">TRILINGUAL KIDS ACADEMY</h4>
+                            <p class=" text-white">Trilingual Kids –
+                                A digital solution where teachers and students connect online instead of physical
+                                schools.
+                                Teachers can upload assignments, students can complete them virtually, and teachers can
+                                evaluate & score performance directly.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mathgame.html">
+                    <div class="project-card bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105
+            transition-transform duration-300 ease-in-out">
+                        <div class="imgBackgnd">
+                            <img src="Images/mobile 44.0.jpg"
+                                alt="E-learning platform homepage with course catalogs, student progress tracking, and interactive elements"
+                                class="p-4 object-contain max-w-full h-auto flex justify-center items-center">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-500">Math Quiz</h4>
+                            <p class="text-white">Math Game is an interactive and fun educational platform designed to
+                                make
+                                learning
+                                mathematics
+                                enjoyable for students of all ages. By combining games, challenges, and quizzes,
+                                MathGame
+                                transforms ordinary math practice into an exciting adventure.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="mufo.html">
+                    <div class="project-card bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105
+            transition-transform duration-300 ease-in-out">
+                        <div class="imgBackgnd  ">
+                            <img src="Images/mobile 4.0.jpg"
+                                alt="E-learning platform homepage with course catalogs, student progress tracking, and interactive elements"
+                                class="p-4 object-contain max-w-full h-auto flex justify-center items-center">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-500">Mufo-App</h4>
+                            <p class="text-white">Mufo is an innovative platform designed to make learning smart,
+                                interactive, and fun. Whether
+                                you are a student, professional, or lifelong learner, Mufo provides tools and resources
+                                that
+                                simplify complex concepts and enhance understanding.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="erp.html">
+                    <div class="project-card bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105
+            transition-transform duration-300 ease-in-out">
+                        <div class="imgBackgnd">
+                            <img src="Images/image erp 2.jpg"
+                                alt="E-learning platform homepage with course catalogs, student progress tracking, and interactive elements"
+                                class="p-4 object-contain">
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 text-blue-500">ERP System Development</h4>
+                            <p class="text-white">Custom ERP system for a manufacturing company, increasing efficiency
+                                by
+                                40%.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-8 bg-black-800 -mt-8" style="background-color: #111" data-aos="fade-left"
+        data-aos-delay="250" data-aos-duration="1000">
+        <div class="container text-center mx-auto px-4">
+            <h2 class="text-2xl font-bold text-center mb-12 bg-gray-900 from-blue-500 via-purple-500 to-pink-500 
+           bg-clip-text text-white border-b-4 border-green-500 inline-block pb-1">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <div
+                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-sm">
+                    <img src="Images/cyberSec.jpeg"
+                        alt="Security shield icon with digital locks and codes on a server rack, representing advanced cybersecurity measures in a modern data center setting" />
+                    <h3 class="text-xl font-semibold mb-4 text-blue-500" style="margin-top: 20px;">Cybersecurity</h3>
+                    <p class="text-white">Protect your data with our comprehensive security solutions, including
+                        threat detection and compliance management.</p>
+                </div>
+
+                <div
+                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-sm">
+                    <img src="images/cloudCump.jpeg"
+                        alt="Cloud with connected networks and data streams, illustrating scalable cloud computing infrastructure in a futuristic sky environment" />
+                    <h3 class="text-xl font-semibold mb-4 text-blue-500" style="margin-top: 20px;">Cloud Computing</h3>
+                    <p class="text-white">Scale your operations with our cloud-based solutions, ensuring
+                        flexibility
+                        and cost-efficiency.</p>
+                </div>
+                <div
+                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-sm">
+                    <img src="images/AI&ML.jpeg"
+                        alt="Artificial intelligence brain with neural networks and machine learning algorithms visualized as glowing circuits on a tech circuit board" />
+                    <h3 class="text-xl font-semibold mb-4 text-blue-500" style="margin-top: 20px;">AI & ML Solutions
+                    </h3>
+                    <p class="text-white">Harness the power of AI with custom machine learning models tailored to
+                        your business needs.</p>
+                </div>
+                <!-- <div class="service-card bg-white p-6 rounded-lg shadow">
+                    <img src="images/E-comm.jpeg"
+                        alt="Artificial intelligence brain with neural networks and machine learning algorithms visualized as glowing circuits on a tech circuit board" />
+                    <h3 class="text-xl font-semibold mb-4" style="margin-top: 20px;">E-Commerce Platform</h3>
+                    <p class="text-gray-700">Full-stack e-commerce solution with secure payment integration.</p>
+                </div> -->
+                <div
+                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-sm">
+
+                    <img src="images/Bussiness-intelli.jpeg"
+                        alt="Artificial intelligence brain with neural networks and machine learning algorithms visualized as glowing circuits on a tech circuit board" />
+                    <h3 class="text-xl font-semibold mb-4 text-blue-500" style="margin-top: 20px;">Business
+                        Intelligence</h3>
+                    <p class="text-white">Advanced BI tools providing actionable insights for executive
+                        decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Team Section -->
+    <!-- <section id="team" class="py-10">
+        <div class="container mx-auto px-4 ">
+            <h3 class="text-3xl font-bold text-center mb-12">Meet Our Team</h3>
+            <div class="grid md:grid-cols-2 ">
+                <div class="text-center">
+                    <img src="Image/ss.jpg"
+                        alt="Portrait of Alex Johnson, CEO, smiling professional man in business attire with short brown hair"
+                        class="w-40 h-40 rounded-full mx-auto mb-4 shadow-md">
+                    <h4 class="text-xl font-semibold">Shraddha Khandelwal</h4>
+                    <p class="text-gray-600">CEO & Founder</p>
+                    <p>15+ years in tech leadership</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/016d0935-7a4b-477d-b609-5ee8a99a2e1c.png"
+                        alt="Portrait of Sarah Chen, CTO, focused Asian woman in tech attire with glasses and lightblue hair"
+                        class="w-40 h-40 rounded-full mx-auto mb-4 shadow-md">
+                    <h4 class="text-xl font-semibold">Sarah Chen</h4>
+                    <p class="text-gray-600">CTO</p>
+                    <p>Expert in cloud architectures</p>
+                </div>
+                
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-10 bg-black -mt-4" style="background-color: #111" data-aos="fade-left"
+        data-aos-delay="250" data-aos-duration="1000">
+        <div class="container text-center mx-auto px-4">
+            <h3 class="text-2xl font-bold text-center mb-12 bg-gray-100 from-blue-500 via-purple-500 to-pink-500 
+           bg-clip-text text-white border-b-4 border-green-500 inline-block pb-1">Latest Insights</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+
+
+                <div
+                    class="bg-gray-900 rounded-lg shadow-md p-6 transform transition duration-500 hover:-translate-y-3 hover:shadow-blue-500/50 hover:shadow-lg">
+                    <a href="aibussiness.html">
+                        <img src="images/FutureAIBuss.jpeg"
+                            alt="Illustrative graphic showing futuristic cityscapes with integrated AI technologies and autonomous vehicles"
+                            class="w-full h-48 object-cover rounded mb-4">
+                    </a>
+                    <h4 class="text-xl font-semibold mb-2 text-blue-500">The Future of AI in Business</h4>
+                    <p class=" mb-4 text-white">Exploring how AI is reshaping industries and impacting
+                        businesses.</p>
+                    <a href="aibussiness.html">
+                        <button class="text-blue-600 hover:text-blue-700 font-semibold">Read Article</button>
+                    </a>
+                </div>
+
+                <div
+                    class="bg-gray-900 rounded-lg shadow-md p-6 transform transition duration-500 hover:-translate-y-3 hover:shadow-blue-500/50 hover:shadow-lg">
+                    <a href="cloudsecurity.html">
+                        <img src="images/CloudSecurityBestPract.jpeg"
+                            alt="Infographic explaining cloud security layers with shields, locks, and data flow diagrams"
+                            class="w-full h-48 object-cover rounded mb-4">
+                    </a>
+                    <h4 class="text-xl font-semibold mb-2 text-blue-500">Cloud Security Best Practices</h4>
+                    <p class="text-white mb-4">Essential strategies to protect your data in the cloud era.</p>
+                    <a href="cloudsecu.html">
+                        <button class="text-blue-600 hover:text-blue-700 font-semibold">Read Article</button>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- Real-Time Map Section -->
+    <section id="map" class="py-10 bg-black-800 mt-2">
+        <div class="container mx-auto px-4 text-center">
+            <h3
+                class="text-2xl font-bold text-center mb-12 text-white border-b-4 border-green-500 inline-block pb-1 -mt-5">
+                Our
+                Global Presence</h3>
+            <p class="text-center mb-8 text-white -mt-6">Track our offices and operations in real-time across the world.
+            </p>
+            <div class="map-container rounded-lg shadow-md -mt-7">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3727457765403!2d75.87110847501972!3d22.714382927759416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd40f16f9f4b%3A0x1628300439af6dca!2sClumpCoder!5e0!3m2!1sen!2sin!4v1757060738207!5m2!1sen!2sin"
+                    width="100%" height="100%" style="border:2px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="mt-8 text-center">
+                <!-- Button -->
+                <button onclick="openMap()" class="bg-blue-600 text-white px-4 py-2 rounded">
+                    View Full Map
+                </button>
+
+                <!-- Full Map Modal -->
+                <div id="mapModal"
+                    class="fixed inset-0 bg-gray-100 bg-opacity-70 hidden items-center justify-center z-50">
+                    <div class="bg-white w-11/12 h-5/6 rounded-lg relative">
+                        <!-- Close button -->
+                        <span onclick="closeMap()" class="absolute top-2 right-4 text-2xl cursor-pointer">&times;</span>
+
+                        <!-- Map iframe -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3727457765403!2d75.87110847501972!3d22.714382927759416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd40f16f9f4b%3A0x1628300439af6dca!2sClumpCoder!5e0!3m2!1sen!2sin!4v1757060738207!5m2!1sen!2sin"
+                            class="w-full h-full rounded-lg" allowfullscreen="">
+                        </iframe>
+                    </div>
+                </div>
+
+                <script>
+                    function openMap() {
+                        document.getElementById("mapModal").classList.remove("hidden");
+                        document.getElementById("mapModal").classList.add("flex");
+                    }
+                    function closeMap() {
+                        document.getElementById("mapModal").classList.add("hidden");
+                    }
+                </script>
+
+
+            </div>
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <!-- <section class="py-5 bg-gray-100" style="background-color: #ece5dd;">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
+            <div class="relative overflow-hidden">
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide">
+                        <div class="bg-white rounded-lg shadow-md p-8 mx-4 min-w-full">
+                            <p class="text-lg italic mb-4">"TechNova transformed our operations with their cloud
+                                solutions. Extraordinary service!"</p>
+                            <p class="font-semibold">- John Smith, CEO of Acme Corp</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-8 mx-4 min-w-full">
+                            <p class="text-lg italic mb-4">"Their cybersecurity expertise saved us from potential
+                                breaches. Highly recommended."</p>
+                            <p class="font-semibold">- Lisa Wong, CIO of TechStart Inc</p>
+                        </div>
+                        <div class="bg-white rounded-lg shadow-md p-8 mx-4 min-w-full">
+                            <p class="text-lg italic mb-4">"Professional, innovative, and reliable. They've been our
+                                tech partners for years."</p>
+                            <p class="font-semibold">- David Lee, Founder of GlobalTech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-8">
+                    <button id="prev-testimonial"
+                        class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded mr-4">Prev</button>
+                    <button id="next-testimonial"
+                        class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded">Next</button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!-- Contact Section -->
+    <div class="container text-center mx-auto px-4 bg-black-800">
+        <!-- <h3 class="text-2xl font-bold text-center mb-12 text-white border-b-4 border-green-500 inline-block">Get In Touch</h3> -->
+
+        <h6
+            class="text-2xl font-bold text-center mb-8 border-b-4 border-green-500 inline-block pb-2 bg-gray-100; from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-white pb-1">
+            Get In Touch </h6>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="text-start">
+                <div class="mb-6 text-white">
+                    <h4 class="text-xl font-semibold mb-2">Contact Information</h4>
+
+                    <p class="mb-2">
+                        <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>
+                        411 President Tower, Madhumilan Square, Indore
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fas fa-phone-alt mr-2 text-blue-600"></i>
+                        +91 94798-40841
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fas fa-envelope mr-2 text-blue-600"></i>
+                        clumpcoder@gmail.com
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/clumpcoder/posts/?feedView=all"
+                            class="text-blue-600 hover:text-blue-700"><img
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEUAfrv///8AdbcAd7gAeLioyODX5vHF2uq10OXB2OkAfLoAcbUAerkAc7b7/f7y9/tFk8Uehb9sps54rNJVmsnm8PaDs9WWvdoxi8Gfw92OudjP4O70+Ps7j8Ndnsvh7PQmh78AaLFjosxY5DW2AAAGLUlEQVR4nO2d6XaiMBhAySJIEmQXce30/R9yQGuLiCYtiSY53/035wxj7mTfvgTojjRuiiwPXCPPiiZO73WC0Z/37YZjKhh7d4J/DWOCYr5px5K3hnXBqXtuQxjlRf3QcFVy8e4UakDwcjVtGFH67sRpgtJoynDN3S6fQxhf3xtW5N3J0gqpxoaZLyX0Cs1uDSvfBDvFami49quIXiDrH8OIvzs1RuDR1XDleC//CEZXX4alf5XwAi0vhrWfZbSH12fDwoeh2jSi6A1Tf7Owy8R9Z9j6Wgt7aNsZbvxsSC+wDQq8LqRdMU2DGL87EUbBcdD4XA27itgEHvcVPaIIMp8bmq6pyYLcc0P3lkUBAADch1GCOwj1c5wgSJJtl7sw3C2bI8beSQpexcM9nV3BvRrSsuR4QiPSMvFnQCRYNPbrOW18yUaSraYE+5XI5N1p0wIpHvh1tD6sETwT7BTdz0WRPRPsCqrr2zpMPKqDV1xfrUsmW9Ehjm8LiEomiNDW6T6Dh3LDlcuNDZM0MxfWDmciWaoYnhzORC5rSC+4u6KlVki7YursVIqu5XY9S2d7fbVqiFDo7P4OkXb3F1Jnmxqs0Bv27L03XDk7cMM77/Mwltv1nJxtaWirZhg521uIp9P7H9w9ssKYmmHl7JhGsTF1efqkNmxzd9DWb8WoGDq9UkMUWtOds31FDyPyGeKHy1nYdRifMsHW6SzsSCQzKJeXML54vty2d7cr/Ibhu63DgaAXh6pY8nCKUQceZGHQ3wVrpgWX/uwC481EZUwr9xuZH1hyHDmeSo9uLJ4RON/u9l96YXvw4krtGIo5O1RVlnPs6V2p4Hwp3MW77AAAAAAAWEYfZwbjpAdjQqjwanzBKE4OZRuHdZru07QOo8X2GHDiyxiR8k0zNdfeR9sPk6GBBJHxp8/Gezkiydt6Qu+6mNB+JIYmM6JcSoinfln62e1hOJZk0iMD4aeZCRtZyH4ZTa2XUtlnwy1HlhyUdoDqwsSk+wWGVCgeakHodNC//GzekCtuw15YaF/8Mm3IVM8KXKlzzRvOhg1F/qQBfcBR73alWUOqeDTwFr23PIwakuNfBBFa61Q0afhXQb1XIAwaUoVT8o846mtuzBmKzd8FEdK352XMEJO95K88Rd8tD2OG/xRPBT5C2+a6KcO4nCeI0EFTOTVluFO7BfCEk6ZyaspQA5oiz1hsWOvp9y021JSJNhvqqYk2G+ppTq021HLs02pDLUd3rTZERw1tjd2GOoqp3YY6giLabajjbqflhuX8ivgyw3oXL5fx7pdLbxoq4ksMw22WJLjfsMEJqRa/mBpruNv5AsPlRzLcOxOEl8qOGnpE44Zhju/GXhQrfx7MHriZNtxObyclqksA869cGTb8fFSPnkfF+WF+Y2rW8PNxU4i3Sv/C/LAjRg2bZ+2EStARhBazuwuThuHTMRfLVQznd4gmDSV33rDK1vD8C7oGDZey3lolE+dfnDNoKN16ULksP39QY85Q/r8vFDpFmw3lPRkTbhsqnONSuGhtsWGoMGZW+HGLDVWiFChURIsNVZbk2cFlQ6X70fLL8hYbKk1duXQqbK+hWuAlLF22sddQ7Qq4vLuw11AtZfJxm72GkVLK5MHGLDZUmvUQ6dFMMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMARDMNRtSLehhNNUWqWfLZSiPdBW9usaQvD072k850+fKYazkP66w08RAwAAuIMXz/k+huVB5rlhFmiKGG0roggazU+aWAZtgnj2wNVqcBzoCHFqMTwNZPG23IZtUKAUJsZZaNsZ7n0upnzfGep6YcBGRIF6Q33PmVgHr8+GqPS1JtI+ylRvuPLlDcwRjK6+DFHkZznl58gvZ0O09nE5h6zRjyGq/KuK1wfBvgxR5pvi96N8V0NU+VVQyfeTbt+GaG3iEdM3wfga3RuiiPpSUikdxM8aGKJVaea93RcjeDl8DmxoeH5v1/Hen1Fe3IbpuzVEaN9uOKaCuefJ+jfZ+aZNR0Zjw440bopMw9MfLybPiiYe63X8B12BcdmLsGMEAAAAAElFTkSuQmCC"
+                                alt="" height="10px" width='30px'></a>
+
+                        <a href="https://www.linkedin.com/company/clumpcoder/posts/?feedView=all"
+                            class="text-blue-600 hover:text-blue-700">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                alt="Instagram" class="w-8 h-8 rounded" />
+
+                            <a href="https://www.linkedin.com/company/clumpcoder/posts/?feedView=all"
+                                class="text-blue-600 hover:text-blue-700">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
+                                    alt="Twitter" class="w-8 h-8" />
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+            <!-- <form id="contact-form" class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full p-3 border rounded" required>
+                    <input type="email" placeholder="Email" class="w-full p-3 border rounded" required>
+                    <textarea placeholder="Message" class="w-full p-3 border rounded" rows="5" required></textarea>
+                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send
+                        Message</button>
+                </form> -->
+            <form method="POST" id="form" class="space-y-4" style="background-color:gray-900;">
+
+                <input type="hidden" name="access_key" value="5784d9ac-b8da-4678-bc5f-9b224dfb7332">
+
+                <input type="text" name="name" placeholder="Enter Your Name" class="w-full p-3 border rounded mr-5"
+                    required>
+                <input type="email" name="email" placeholder="Enter Your Email" class="w-full p-3 border rounded"
+                    required>
+                <textarea name="message" placeholder="Message" class="w-full p-3 border rounded" rows="5"
+                    required></textarea>
+                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send
+                </button>
+                <div id="result"></div>
+            </form>
+        </div>
+    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Clumpcoder IT Solutions</h4>
+                    <p class="text-white">Innovating with technology since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+                        <li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+                        <li><a href="career.html" class="hover:text-blue-400">Career</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">Cloud Solutions</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Cybersecurity</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Software Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full px-3 py-2 rounded-md bg-gray-700 text-white mb-2">
+                    <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded btn-hover">Subscribe</button>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p>© 2024 ClumpCoder Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Map Modal
+        function openMap() {
+            document.getElementById("mapModal").classList.remove("hidden");
+            document.getElementById("mapModal").classList.add("flex");
+        }
+        function closeMap() {
+            document.getElementById("mapModal").classList.add("hidden");
+        }
+
+        // Contact Form
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function (e) {
+            const formData = new FormData(form);
+            e.preventDefault();
+
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            result.innerHTML = "Please wait..."
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Form submitted successfully!";
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.innerHTML = "";
+                    }, 3000);
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>
+</content>
+</create_file>

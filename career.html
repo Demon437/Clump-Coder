@@ -1,0 +1,181 @@
+<!-- career.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers - ClumpCoder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+  <!-- Navbar -->
+  <nav class="bg-transparent shadow-md fixed w-full z-20 backdrop-blur-md hidden md:flex space-x-8 justify-between px-5 py-5">
+    <a href="./" class="text-2xl font-bold text-white">ClumpCoder</a>
+    <ul class="flex gap-6">
+      <a href="./" class="hover:text-indigo-400 text-white"><b>Home</b></a>
+      <a href="./" class="hover:text-indigo-400 text-white"><b>Services</b></a>
+      <a href="./" class="hover:text-indigo-400 text-white"><b>About</b></a>
+      <a href="./" class="hover:text-indigo-400 text-white"><b>Portfolio</b></a>
+      <a href="./" class="hover:text-indigo-400 text-white"><b>Blog</b></a>
+      <a href="career.html" class="text-indigo-400 font-semibold">Careers</a>
+      <a href="./" class="hover:text-indigo-400 text-white"><b>Contact</b></a>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white">
+    <h1 class="text-4xl font-bold">Join Our Team</h1>
+    <p class="mt-3 max-w-2xl mx-auto text-gray-300">
+      Work with the best minds, build exciting products, and grow your career with us.
+    </p>
+  </section>
+
+  <!-- Open Positions -->
+  <section class="container mx-auto px-6 py-12">
+    <h2 class="text-2xl font-bold mb-6 text-center text-white">Open Positions</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-gray-800 p-6 rounded-xl shadow border border-gray-700">
+        <h3 class="text-xl font-semibold text-white">Frontend Developer</h3>
+        <p class="text-gray-400 mt-2">Remote • Full-time</p>
+        <p class="mt-4 text-gray-300">Work on React, Tailwind and modern web technologies.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0ol-IG3wEME8crQAe20QJu8UZAnjI5Pr-RgO1A9Bt6tIDrQ/viewform">
+        <button onclick="openForm('Backend Developer')" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-500">Apply Now</button>
+        </a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-xl shadow border border-gray-700">
+        <h3 class="text-xl font-semibold text-white">Backend Developer</h3>
+        <p class="text-gray-400 mt-2">Onsite • Full-time</p>
+        <p class="mt-4 text-gray-300">Work with Node.js, Express and databases to build APIs.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0ol-IG3wEME8crQAe20QJu8UZAnjI5Pr-RgO1A9Bt6tIDrQ/viewform">
+        <button onclick="openForm('Backend Developer')" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-500">Apply Now</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Form -->
+  <!-- <div id="applyModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+    <div class="bg-gray-800 rounded-xl shadow-lg w-full max-w-md p-6 relative border border-gray-700">
+      <button onclick="closeForm()" class="absolute top-3 right-3 text-gray-400 hover:text-red-500 text-xl">&times;</button>
+      <h2 id="jobTitle" class="text-2xl font-bold mb-4 text-white">Apply</h2>
+
+      Application Form
+      <form id="applicationForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf0ol-IG3wEME8crQAe20QJu8UZAnjI5Pr-RgO1A9Bt6tIDrQ/viewform" method="POST" enctype="multipart/form-data">
+        <input type="hidden" id="jobRole" name="role">
+
+        <input type="text" name="name" placeholder="Full Name" required class="w-full p-2 border border-gray-700 rounded mb-2 bg-gray-900 text-white">
+        <input type="email" name="email" placeholder="Email" required class="w-full p-2 border border-gray-700 rounded mb-2 bg-gray-900 text-white">
+        <input type="file" name="resume" accept=".pdf,.doc,.docx" required class="w-full p-2 border border-gray-700 rounded mb-2 bg-gray-900 text-white">
+        <textarea name="message" rows="4" placeholder="Why should we hire you?" class="w-full p-2 border border-gray-700 rounded mb-2 bg-gray-900 text-white"></textarea>
+
+        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-500">Submit Application</button>
+      </form> -->
+
+      <!-- Success Message -->
+      <div id="successMessage" class="hidden text-center">
+        <h3 class="text-xl font-semibold text-green-500">✅ Thank You!</h3>
+        <p class="mt-2 text-gray-300">You have submitted successfully.<br>Our team will connect to you soon.</p>
+        <button onclick="closeForm()" class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-500">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-white">Clumpcoder IT Solutions</h4>
+          <p class=" text-white">Innovating with technology since 2010.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#home" class="hover:text-blue-400 text-white">Home</a></li>
+            <li><a href="#services" class="hover:text-blue-400 text-white">Services</a></li>
+            <li><a href="#about" class="hover:text-blue-400 text-white">About</a></li>
+            <li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+            <li><a href="career.html" class="hover:text-blue-400">Career</a></li>
+            <li><a href="#contact" class="hover:text-blue-400 text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-white">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-blue-400 text-white">Cloud Solutions</a></li>
+            <li><a href="#" class="hover:text-blue-400 text-white">Cybersecurity</a></li>
+            <li><a href="#" class="hover:text-blue-400 text-white">Software Development</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-white">Subscribe</h4>
+          <input type="email" placeholder="Enter your email"
+            class="w-full px-3 py-2 rounded-md bg-gray-800 border border-gray-700 text-white mb-2">
+          <button class="bg-indigo-700 hover:bg-indigo-500 px-4 py-2 rounded text-white">Subscribe</button>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-800 text-center text-white">
+        <p>© 2024 ClumpCoder Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function openForm(role) {
+      document.getElementById("applyModal").classList.remove("hidden");
+      document.getElementById("jobTitle").innerText = "Apply for " + role;
+      document.getElementById("jobRole").value = role;
+      document.getElementById("applicationForm").classList.remove("hidden");
+      document.getElementById("successMessage").classList.add("hidden");
+    }
+
+    function closeForm() {
+      document.getElementById("applyModal").classList.add("hidden");
+    }
+
+    // ✅ Form submit handler
+    document.getElementById("applicationForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = this;
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("http://localhost:5000/apply", {
+          method: "POST",
+          body: formData
+        });
+
+        if (!response.ok) {
+          throw new Error("Server error: " + response.status);
+        }
+
+        const result = await response.json();
+
+        if (result.success) {
+          form.reset();
+          form.classList.add("hidden");
+          document.getElementById("successMessage").classList.remove("hidden");
+          alert("✅ Thank you! Your form is submitted. We will connect with you soon.");
+        } else {
+          alert("❌ Error: " + (result.message || "Something went wrong."));
+        }
+      } catch (err) {
+        console.error(err);
+        alert("⚠️ Form not submitted | Please try again");
+      }
+    });
+
+    // Click outside modal to close
+    window.onclick = function(event) {
+      const modal = document.getElementById("applyModal");
+      if (event.target === modal) {
+        modal.classList.add("hidden");
+      }
+    }
+  </script>
+
+</body>
+</html>
