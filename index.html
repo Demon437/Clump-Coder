@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ClumpCoder IT Solutions - IT Company</title>
@@ -10,389 +11,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Add this inside <head> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    <style>
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            background-color: #111;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url('images/Clumbcoder.mp4');
-            background-size: cover;
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        .imgBackgnd {
-            background-color: rgb(196, 193, 199);
-        }
-
-        .btn-hover {
-            transition: all 0.3s ease;
-        }
-
-        .btn-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-card-one {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-logo {
-            width: 170px;
-            height: 170px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgb(159, 159, 159);
-        }
-
-        .service-card {
-            width: 300px;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-
-        .service-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .project-card {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .fade-in {
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .testimonial-slider {
-            overflow: hidden;
-        }
-
-        .testimonial-slide {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .map-container {
-            height: 400px;
-            width: 100%;
-        }
-
-        .tech-item {
-            border: 0.1px solid gray-100;
-        }
-
-        .tech-item:hover {
-            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgb(159, 159, 159);
-        }
-
-        @keyframes fadeInOut {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            20% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            50% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            80% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            100% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-        }
-
-        .fade-in-out {
-            animation: fadeInOut 2s ease-in-out infinite;
-        }
- .p-4 {
-        padding: 0.5rem !important;
-        background-color: #22223b; /* Theme-based dark background */
-        color: #f8f8f2;            /* Theme-based light text */
-        border-radius: 0.5rem;     /* Optional: for a modern look */
-    }
-     .imgBackgnd {
-          background-color: blue !important;
-    }
-    /* ...existing code... */
-.light-mode #about .text-white {
-    color: #fff !important;
-}
-/* ...existing code... */
-
-/* ...existing code... */
-.light-mode #technologies h2,
-.light-mode #technologies .text-white {
-    color: #fff !important;
-}
-
-
-/* ...existing code... */
-header,
-header nav a,
-header .text-white,
-header .fa-bars,
-header .fa-moon,
-header .fa-sun,
-#mobile-menu,
-#mobile-menu a,
-#theme-toggle {
-    background: transparent !important;
-    color: #fff !important;
-    /* Ensures header and nav links/icons are always white */
-}
-
-.light-mode header,
-.light-mode header nav a,
-.light-mode header .text-white,
-.light-mode header .fa-bars,
-.light-mode header .fa-moon,
-.light-mode header .fa-sun,
-.light-mode #mobile-menu,
-.light-mode #mobile-menu a,
-.light-mode #theme-toggle {
-    background: transparent !important;
-    color: #fff !important;
-}
-/* ...existing code... */
-
-/* ABOUT SECTION MODE  */
-/* ...existing code... */
-
-/* About section: Light mode - text black, background black */
-/* ...existing code... */
-
-/* About section: Light mode - text black, background white */
-.light-mode #about {
-    background: #fff !important;
-}
-.light-mode #about .text-white,
-.light-mode #about p,
-.light-mode #about h3 {
-    color: #000 !important;
-}
-
-/* Light mode: Header dark background, nav links white */
-.light-mode header {
-    background: #111 !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-.light-mode header nav a,
-.light-mode header .text-white,
-.light-mode header .fa-bars,
-.light-mode header .fa-moon,
-.light-mode header .fa-sun,
-.light-mode #mobile-menu,
-.light-mode #mobile-menu a,
-.light-mode #theme-toggle {
-    color: #fff !important;
-}
-.light-mode #mobile-menu {
-    background: #111 !important;
-}
-
-/* ...existing code... */
-
-/* Light mode: Our Portfolio section background white, text black */
-.light-mode #portfolio {
-    background: #fff !important;
-}
-.light-mode #portfolio h3,
-.light-mode #portfolio .text-white,
-.light-mode #portfolio p,
-.light-mode #portfolio h4 {
-    color: #000 !important;
-}
-
-.light-mode #services {
-    background: #fff !important;
-}
-.light-mode #services h2,
-.light-mode #services h3,
-.light-mode #services h4,
-.light-mode #services .text-white,
-.light-mode #services p {
-    color: #000 !important;
-}
-.light-mode #services .service-card-one,
-.light-mode #services .service-card {
-    background: #f3f4f6 !important; /* Slightly off-white for cards */
-    color: #000 !important;
-}
-.light-mode #services .text-blue-500 {
-    color: #2563eb !important; /* Keep blue headings blue */
-}
-
-
-
-/* ...existing code... */
-
-/* Light mode: Get In Touch section background white, text black */
-.light-mode #contact,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 {
-    background: #fff !important;
-}
-.light-mode #contact h6,
-.light-mode #contact h4,
-.light-mode #contact p,
-.light-mode #contact label,
-.light-mode #contact input,
-.light-mode #contact textarea,
-.light-mode #contact button,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 h6,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 h4,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 p,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 label,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 input,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 textarea {
-    color: #000 !important;
-    background: #fff !important;
-}
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 .text-white {
-    color: #000 !important;
-}
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 input,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 textarea {
-    background: #f3f4f6 !important;
-    color: #000 !important;
-    border-color: #e5e7eb !important;
-}
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 button {
-    background: #2563eb !important;
-    color: #fff !important;
-}
-
-
-/* ...existing code... */
-
-/* Light mode: Our Global Presence section background white, text black */
-.light-mode #map,
-.light-mode #map .container {
-    background: #fff !important;
-}
-.light-mode #map h3,
-.light-mode #map p,
-.light-mode #map .text-white {
-    color: #000 !important;
-}
-.light-mode #map button {
-    background: #2563eb !important;
-    color: #fff !important;
-}
-.light-mode #mapModal {
-    background: rgba(255,255,255,0.95) !important;
-}
-.light-mode #mapModal .bg-white {
-    background: #fff !important;
-    color: #000 !important;
-}
-
-
-
-
-/* ...existing code... */
-
-/* Light mode: Our Technology Stack section para text black */
-.light-mode #technologies p,
-.light-mode #technologies .text-white {
-    color: #000 !important;
-}
-
-/* ...existing code... */
-.tech-item {
-    border: 0.1px solid gray-100;
-    padding: 1rem !important;      /* Reduce padding */
-    min-height: 210px;             /* Set a lower min-height if needed */
-    height: 220px;                 /* Set a fixed height for uniformity */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-.tech-item .service-logo {
-    width: 100px !important;       /* Reduce image size */
-    height: 100px !important;
-    margin-bottom: 0.5rem;
-}
-
-
-
-
-/* Ensure Technology Stack card para text is light in light mode */
-.light-mode #technologies p,
-.light-mode #technologies .text-white {
-    color: #fff !important;
-}
-
-
-</style>
+  
 </head>
 
 <body class="bg-black text-gray-900 bg-black" style="width: 100%;">
@@ -405,42 +27,60 @@ header .fa-sun,
     </div>
 
     <!-- Header -->
-  <!-- ...existing code... -->
-<header class="bg-transparent shadow-md fixed w-full z-20 backdrop-blur-md">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="flex items-center space-x-2">
-            <img src="Images/CompanyIcon.jpeg" alt="ClumpCoder Solutions logo" class="h-10 w-10">
-            <h1 class="text-2xl font-bold bg-clip-text text-blue-400">
-                ClumpCoder
-            </h1>
-        </div>
-        <nav class="hidden md:flex space-x-8">
-            <a href="#home" class="text-white hover:text-blue-600 transition"><b>Home</b></a>
-            <a href="#services" class="text-white hover:text-blue-600 transition"><b>Services</b></a>
-            <a href="#about" class="text-white hover:text-blue-600 transition"><b>About</b></a>
-            <a href="#portfolio" class="text-white hover:text-blue-600 transition"><b>Portfolio</b></a>
-            <a href="career.html" class="text-white hover:text-blue-600 transition"><b>Career</b></a>
-            <a href="#contact" class="text-white hover:text-blue-600 transition"><b>Contact</b></a>
-        </nav>
-        <!-- Search Bar Start -->
-        <input
-            id="search-bar"
-            type="text"
-            placeholder="Search services..."
-            class="hidden md:block px-4 py-2 rounded bg-gray-800 text-white ml-4 border-2 border-blue-400 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            style="width: 220px; box-shadow: 0 0 0 2px #2563eb33;"
-        />
-        <!-- Search Bar End -->
-        <!-- Dark/Light mode toggle button -->
-        <button id="theme-toggle" class="ml-4 text-white focus:outline-none" title="Toggle dark/light mode">
-            <i id="theme-icon" class="fas fa-moon fa-lg"></i>
-        </button>
-        <button id="mobile-menu-toggle" class="md:hidden text-white">
-            <i class="fas fa-bars fa-2x"></i>
-        </button>
-    </div>
-    <!-- ...existing code... -->
-</header>
+        <!-- Accessible Header/Nav with Mobile Menu -->
+        <header class="site-header bg-transparent shadow-md fixed w-full z-20 backdrop-blur-md">
+            <div class="header-inner container mx-auto px-4 py-4 flex justify-between items-center">
+                <a class="brand flex items-center space-x-2" href="/">
+                    <img src="Images/CompanyIcon.jpeg" alt="ClumpCoder Solutions logo" class="h-10 w-10">
+                    <span class="text-2xl font-bold bg-clip-text text-blue-400">ClumpCoder</span>
+                </a>
+                <!-- Desktop nav -->
+                <nav class="nav-desktop hidden md:flex space-x-8" aria-label="Primary">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="text-white hover:text-blue-600 transition"><b>Home</b></a></li>
+                        <li><a href="#services" class="text-white hover:text-blue-600 transition"><b>Services</b></a></li>
+                        <li><a href="#about" class="text-white hover:text-blue-600 transition"><b>About</b></a></li>
+                        <li><a href="#portfolio" class="text-white hover:text-blue-600 transition"><b>Portfolio</b></a></li>
+                        <li><a href="career.html" class="text-white hover:text-blue-600 transition"><b>Career</b></a></li>
+                        <li><a href="#contact" class="text-white hover:text-blue-600 transition"><b>Contact</b></a></li>
+                    </ul>
+                </nav>
+                <!-- Search Bar Start -->
+                <input
+                        id="search-bar"
+                        type="text"
+                        placeholder="Search services..."
+                        class="hidden md:block px-4 py-2 rounded bg-gray-800 text-white ml-4 border-2 border-blue-400 focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        style="width: 220px; box-shadow: 0 0 0 2px #2563eb33;"
+                />
+                <!-- Search Bar End -->
+                <!-- Dark/Light mode toggle button -->
+                <button id="theme-toggle" class="ml-4 text-white focus:outline-none" title="Toggle dark/light mode">
+                    <i id="theme-icon" class="fas fa-moon fa-lg"></i>
+                </button>
+                <!-- Hamburger for mobile -->
+                <button id="nav-toggle"
+                                class="hamburger md:hidden text-white ml-2"
+                                aria-label="Toggle navigation"
+                                aria-controls="mobile-menu"
+                                aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <!-- Mobile menu overlay -->
+            <nav id="mobile-menu" class="mobile-menu fixed inset-0 bg-black bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-8 text-white text-lg font-bold transition-transform duration-300 translate-x-full md:hidden" aria-label="Mobile" hidden>
+                <ul class="space-y-4">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
 <!-- Add this script before </body> -->
 <script>
@@ -458,6 +98,39 @@ header .fa-sun,
             });
         });
     }
+
+    // Mobile menu toggle
+    const navToggle = document.getElementById('nav-toggle');
+    var mobileMenu = document.getElementById('mobile-menu');
+    navToggle.addEventListener('click', function () {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('open');
+      if (mobileMenu.classList.contains('open')) {
+        mobileMenu.removeAttribute('hidden');
+        document.body.classList.add('menu-open');
+      } else {
+        mobileMenu.setAttribute('hidden', '');
+        document.body.classList.remove('menu-open');
+      }
+    });
+    // Close mobile menu on link click or Escape
+    mobileMenu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        navToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.remove('open');
+        mobileMenu.setAttribute('hidden', '');
+        document.body.classList.remove('menu-open');
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        navToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.remove('open');
+        mobileMenu.setAttribute('hidden', '');
+        document.body.classList.remove('menu-open');
+      }
+    });
 </script>
 <!-- ...existing code... -->
 
@@ -528,20 +201,18 @@ header .fa-sun,
                 At our core, we’re an IT powerhouse dedicated to transforming businesses with future-ready digital
                 solutions. Our work is designed to empower brands, accelerate growth, and set new standards of
                 innovation that separate you from the competition.</p>
-            <!-- <a href="#contact"
-                class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl">Get
-                Started Now</a> -->
+          
         </div>
     </section>
    
 
     <!-- Services Section -->
-    <section id="services" class="py-5 bg-black mt-5" style="background-color:#111;" data-aos="fade-left"
+      <section id="services" class="py-5 bg-black mt-5" style="background-color:#111;" data-aos="fade-left"
         data-aos-delay="250" data-aos-duration="1000">
         <div class="container text-center mx-auto px-4">
             <h6 class="text-2xl font-bold text-center mb-8 border-b-4 border-green-500 inline-block pb-1 bg-gray-100; from-blue-500 via-purple-500 to-pink-500 
            bg-clip-text text-white">Our Services</h6>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- <div class="service-card-one p-6 text-center">
                     <i class="fas fa-cloud text-4xl text-blue-600 mb-4"></i>
                     <h4 class="text-xl font-semibold mb-2">Cloud Solutions</h4>
@@ -549,7 +220,7 @@ header .fa-sun,
                 </div> -->
 
            <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
-    transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
+    transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group" id="">
     <i class="fas fa-cloud text-4xl text-blue-600 mb-4 transition duration-300"></i>
     <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">
         Cloud Solutions
@@ -653,8 +324,6 @@ header .fa-sun,
                         About Us
                     </h3>
             <p class="text-md mb-4 fade-in text-white" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000"> ClumpCoder is a multi-faceted tech company focused on web, mobile, e-commerce, and AI development solutions, boasting small but dynamic team including web developers, Mobile developers, AI developers, designers, and testers. Their vision is centered around achieving 100% customer satisfaction by delivering top-notch products and services at competitive prices, with the goal of becoming the premier choice in computing and information technology services, consultancy, and development through a comprehensive service offering. </p>
-iska bana ke do 
-
                     <p class="text-white">
                         ClumpCoder's mission is to
                         empower individuals, fostering a culture of fairness, integrity, and empathy within their team,
@@ -818,34 +487,56 @@ iska bana ke do
             </div>
         </section>
         <script>
-            // 2-row slider logic
+            // Improved 2-row slider logic with gap fix
             const techSlider = document.getElementById('tech-slider');
             const techSliderWrapper = document.getElementById('tech-slider-wrapper');
             const techPrev = document.getElementById('tech-prev');
             const techNext = document.getElementById('tech-next');
             const techGrid = techSlider.querySelector('.grid');
             const itemsPerCol = 2; // 2 rows
+            const itemsPerRow = 5; // 5 columns visible at once
+            const itemsPerSlide = itemsPerCol * itemsPerRow;
             const totalItems = techGrid.children.length;
-            const itemsPerSlide = 2 * 5; // 2 rows x 5 columns visible at once (adjust for your design)
             const totalSlides = Math.ceil(totalItems / itemsPerSlide);
             let currentSlide = 0;
 
+            // Fill last slide with empty placeholders if needed
+            function fillPlaceholders() {
+                const remainder = totalItems % itemsPerSlide;
+                if (remainder !== 0) {
+                    const placeholdersToAdd = itemsPerSlide - remainder;
+                    for (let i = 0; i < placeholdersToAdd; i++) {
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'tech-item bg-transparent p-6 rounded-lg text-center border-0 shadow-none';
+                        placeholder.style.visibility = 'hidden';
+                        techGrid.appendChild(placeholder);
+                    }
+                }
+            }
+            fillPlaceholders();
+
             function updateSlider() {
-                const slideWidth = techGrid.children[0].offsetWidth * 5 + 40; // 5 columns + gap
+                // Calculate width of one column
+                const colWidth = techGrid.children[0].offsetWidth + 32; // 32px gap
+                const slideWidth = colWidth * itemsPerRow;
                 techSlider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
             }
 
             techPrev.addEventListener('click', () => {
                 if (currentSlide > 0) {
                     currentSlide--;
-                    updateSlider();
+                } else {
+                    currentSlide = totalSlides - 1; // Loop to last slide
                 }
+                updateSlider();
             });
             techNext.addEventListener('click', () => {
                 if (currentSlide < totalSlides - 1) {
                     currentSlide++;
-                    updateSlider();
+                } else {
+                    currentSlide = 0; // Loop to first slide
                 }
+                updateSlider();
             });
             window.addEventListener('resize', updateSlider);
             updateSlider();
@@ -886,13 +577,14 @@ iska bana ke do
                         <div class="imgBackgnd">
                             <img src="Images/eacadmy 2.0.jpg"
                                 alt="Healthcare management system interface with patient records and appointment scheduler in soothing colors"
-                                class="p-4 object-contain">
+                                class="p-4 object-contain max-h-full">
                         </div>
                         <div class="p-6">
                             <h4 class="text-xl font-semibold mb-2 text-blue-500">Eduacademy</h4>
-                            <p class="text-white">~Enhanced Efficiency in school operations.
-                                ~High Client Satisfaction with robust features.
-                                ~Market Recognition as a trusted ERP solution.
+                            <p class="text-white">Enhanced Efficiency in school operations.  
+        High Client Satisfaction with robust features.  
+        Market Recognition as a trusted ERP solution.  
+        Comprehensive tools designed to the simplify.
                             </p>
                         </div>
                     </div>
@@ -1003,7 +695,7 @@ iska bana ke do
            bg-clip-text text-white border-b-4 border-green-500 inline-block pb-1">Our Services</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 <div
-                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-sm">
+                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] w-full">
                     <img src="Images/cyberSec.jpeg"
                         alt="Security shield icon with digital locks and codes on a server rack, representing advanced cybersecurity measures in a modern data center setting" />
                     <h3 class="text-xl font-semibold mb-4 text-blue-500" style="margin-top: 20px;">Cybersecurity</h3>
@@ -1012,7 +704,7 @@ iska bana ke do
                 </div>
 
                 <div
-                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-sm">
+                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] w-full" >
                     <img src="images/cloudCump.jpeg"
                         alt="Cloud with connected networks and data streams, illustrating scalable cloud computing infrastructure in a futuristic sky environment" />
                     <h3 class="text-xl font-semibold mb-4 text-blue-500" style="margin-top: 20px;">Cloud Computing</h3>
@@ -1021,7 +713,7 @@ iska bana ke do
                         and cost-efficiency.</p>
                 </div>
                 <div
-                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-sm">
+                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] w-full" id="card-1">
                     <img src="images/AI&ML.jpeg"
                         alt="Artificial intelligence brain with neural networks and machine learning algorithms visualized as glowing circuits on a tech circuit board" />
                     <h3 class="text-xl font-semibold mb-4 text-blue-500" style="margin-top: 20px;">AI & ML Solutions
@@ -1029,14 +721,9 @@ iska bana ke do
                     <p class="text-white">Harness the power of AI with custom machine learning models tailored to
                         your business needs.</p>
                 </div>
-                <!-- <div class="service-card bg-white p-6 rounded-lg shadow">
-                    <img src="images/E-comm.jpeg"
-                        alt="Artificial intelligence brain with neural networks and machine learning algorithms visualized as glowing circuits on a tech circuit board" />
-                    <h3 class="text-xl font-semibold mb-4" style="margin-top: 20px;">E-Commerce Platform</h3>
-                    <p class="text-gray-700">Full-stack e-commerce solution with secure payment integration.</p>
-                </div> -->
+           
                 <div
-                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-sm">
+                    class="relative service-card bg-gray-900/60 backdrop-blur-md p-6 rounded-2xl border border-gray-700 shadow-md transition-transform transform hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] w-full">
 
                     <img src="images/Bussiness-intelli.jpeg"
                         alt="Artificial intelligence brain with neural networks and machine learning algorithms visualized as glowing circuits on a tech circuit board" />
@@ -1143,164 +830,91 @@ iska bana ke do
             </div>
     </section>
 
-
-
-    <!-- Testimonials Section -->
-    <!-- <section class="py-5 bg-gray-100" style="background-color: #ece5dd;">
-        <div class="container mx-auto px-4">
-            <h3 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
-            <div class="relative overflow-hidden">
-                <div class="testimonial-slider">
-                    <div class="testimonial-slide">
-                        <div class="bg-white rounded-lg shadow-md p-8 mx-4 min-w-full">
-                            <p class="text-lg italic mb-4">"TechNova transformed our operations with their cloud
-                                solutions. Extraordinary service!"</p>
-                            <p class="font-semibold">- John Smith, CEO of Acme Corp</p>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md p-8 mx-4 min-w-full">
-                            <p class="text-lg italic mb-4">"Their cybersecurity expertise saved us from potential
-                                breaches. Highly recommended."</p>
-                            <p class="font-semibold">- Lisa Wong, CIO of TechStart Inc</p>
-                        </div>
-                        <div class="bg-white rounded-lg shadow-md p-8 mx-4 min-w-full">
-                            <p class="text-lg italic mb-4">"Professional, innovative, and reliable. They've been our
-                                tech partners for years."</p>
-                            <p class="font-semibold">- David Lee, Founder of GlobalTech</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center mt-8">
-                    <button id="prev-testimonial"
-                        class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded mr-4">Prev</button>
-                    <button id="next-testimonial"
-                        class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded">Next</button>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-
-
     <!-- Contact Section -->
-    <div class="container text-center mx-auto px-4 bg-black-800">
-        <!-- <h3 class="text-2xl font-bold text-center mb-12 text-white border-b-4 border-green-500 inline-block">Get In Touch</h3> -->
-
-        <h6
-            class="text-2xl font-bold text-center mb-8 border-b-4 border-green-500 inline-block pb-2 bg-gray-100; from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-white pb-1">
-            Get In Touch </h6>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="text-start">
-                <div class="mb-6 text-white">
-                    <h4 class="text-xl font-semibold mb-2">Contact Information</h4>
-
-                    <p class="mb-2">
-                        <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>
-                        411 President Tower, Madhumilan Square, Indore
-                    </p>
-
-                    <p class="mb-2">
-                        <i class="fas fa-phone-alt mr-2 text-blue-600"></i>
-                        +91 94798-40841
-                    </p>
-
-                    <p class="mb-2">
-                        <i class="fas fa-envelope mr-2 text-blue-600"></i>
-                        clumpcoder@gmail.com
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="text-xl font-semibold mb-2 text-white">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/company/clumpcoder/posts/?feedView=all"
-                            class="text-blue-600 hover:text-blue-700"><img
-                                src="data:image/png;base64,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"
-                                alt="" height="10px" width='30px'></a>
-
-                        <a href="https://www.linkedin.com/company/clumpcoder/posts/?feedView=all"
-                            class="text-blue-600 hover:text-blue-700">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                                alt="Instagram" class="w-8 h-8 rounded" />
-
-                            <a href="https://www.linkedin.com/company/clumpcoder/posts/?feedView=all"
-                                class="text-blue-600 hover:text-blue-700">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg"
-                                    alt="Twitter" class="w-8 h-8" />
-
-                    </div>
-
-
-
-
-                </div>
-
-
+    <section id="contact" class="py-12 bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-center mb-8 border-b-4 border-green-500 inline-block pb-2 bg-clip-text text-white">Get In Touch</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+                        <div class="text-start">
+                            <div class="mb-6 text-white">
+                                <h4 class="text-xl font-semibold mb-2">Contact Information</h4>
+                                <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-blue-600"></i>411 President Tower, Madhumilan Square, Indore</p>
+                                <p class="mb-2"><i class="fas fa-phone-alt mr-2 text-blue-600"></i>+91 94798-40841</p>
+                                <p class="mb-2"><i class="fas fa-envelope mr-2 text-blue-600"></i>clumpcoder@gmail.com</p>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2 text-white">Follow Us</h4>
+                                <div class="flex space-x-4 mt-2">
+                                    <a href="#" class="text-blue-600 hover:text-blue-700">
+                                       
+                                    </a>
+                                    <a href="https://www.instagram.com/clumpcoder_ind/" class="text-blue-600 hover:text-blue-700" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-8 h-8 rounded" style="margin-bottom: 12px;" />
+                                    </a>
+                                    <a href="https://x.com/ClumpCoder_IND" class="text-blue-600 hover:text-blue-700" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="X (Twitter)" class="w-8 h-8" style="margin-bottom: 12px;" />
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/clumpcoder/" class="text-blue-600 hover:text-blue-700" target="_blank">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" class="w-8 h-8 rounded" style="margin-bottom: 12px;" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
             </div>
-            <!-- <form id="contact-form" class="space-y-4">
-                    <input type="text" placeholder="Name" class="w-full p-3 border rounded" required>
-                    <input type="email" placeholder="Email" class="w-full p-3 border rounded" required>
-                    <textarea placeholder="Message" class="w-full p-3 border rounded" rows="5" required></textarea>
-                    <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send
-                        Message</button>
-                </form> -->
-            <form method="POST" id="form" class="space-y-4" style="background-color:gray-900;">
-
-                <input type="hidden" name="access_key" value="5784d9ac-b8da-4678-bc5f-9b224dfb7332">
-
-                <input type="text" name="name" placeholder="Enter Your Name" class="w-full p-3 border rounded mr-5"
-                    required>
-                <input type="email" name="email" placeholder="Enter Your Email" class="w-full p-3 border rounded"
-                    required>
-                <textarea name="message" placeholder="Message" class="w-full p-3 border rounded" rows="5"
-                    required></textarea>
-                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Send
-                </button>
-                <div id="result"></div>
-            </form>
-        </div>
-    </div>
-    </section>
+    
+                        <form method="POST" id="form" class="space-y-4 bg-gray-800 p-6 rounded-xl shadow-md">
+                            <input type="hidden" name="access_key" value="5784d9ac-b8da-4678-bc5f-9b224dfb7332">
+                            <input type="text" name="name" placeholder="Enter Your Name" class="w-full p-3 border border-gray-600 rounded bg-gray-900 text-white" required>
+                            <input type="email" name="email" placeholder="Enter Your Email" class="w-full p-3 border border-gray-600 rounded bg-gray-900 text-white" required>
+                            <textarea name="message" placeholder="Message" class="w-full p-3 border border-gray-600 rounded bg-gray-900 text-white" rows="5" required></textarea>
+                            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 w-full">Send</button>
+                            <div id="result"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Clumpcoder IT Solutions</h4>
-                    <p class="text-white">Innovating with technology since 2010.</p>
+        <footer class="bg-white text-gray-900 py-8 border-t border-gray-200">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Clumpcoder IT Solutions</h4>
+                        <p>Innovating with technology since 2010.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
+                            <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+                            <li><a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a></li>
+                            <li><a href="career.html" class="hover:text-blue-600 transition">Career</a></li>
+                            <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-blue-600 transition">Cybersecurity</a></li>
+                            <li><a href="#" class="hover:text-blue-600 transition">Software Development</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                        <input type="email" placeholder="Enter your email" class="w-full px-3 py-2 rounded-md border border-gray-300 text-gray-900 mb-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition w-full">Subscribe</button>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
-                        <li><a href="#services" class="hover:text-blue-400">Services</a></li>
-                        <li><a href="#about" class="hover:text-blue-400">About</a></li>
-                        <li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
-                        <li><a href="career.html" class="hover:text-blue-400">Career</a></li>
-                        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-blue-400">Cloud Solutions</a></li>
-                        <li><a href="#" class="hover:text-blue-400">Cybersecurity</a></li>
-                        <li><a href="#" class="hover:text-blue-400">Software Development</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
-                    <input type="email" placeholder="Enter your email"
-                        class="w-full px-3 py-2 rounded-md bg-gray-700 text-white mb-2">
-                    <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded btn-hover">Subscribe</button>
+                <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+                    <p>© 2024 ClumpCoder Solutions. All rights reserved.</p>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-                <p>© 2024 ClumpCoder Solutions. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    <a href="https://wa.me/?text=Hello%20ClumpCoder%20Team!" target="_blank"
+        class="fixed bottom-5 right-5 bg-green-500 text-white dark:bg-green-600 dark:hover:bg-green-700 px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition flex items-center z-50">
+        <i class="fab fa-whatsapp mr-2 text-xl"></i> Chat on WhatsApp
+    </a>
     <script>
         // Mobile menu toggle
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
