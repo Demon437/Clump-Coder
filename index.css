@@ -1,3 +1,41 @@
+/* Remove dark input background in light mode */
+.light-mode #contact input,
+.light-mode #contact textarea {
+    background: #fff !important;
+    color: #222 !important;
+    border: 2px solid black !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: border 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+
+
+
+.light-mode #contact button {
+    /* keep button styles as needed */
+}
+
+/* Light mode text color for form elements */
+.light-mode #contact h2,
+.light-mode #contact h4,
+.light-mode #contact p,
+.light-mode #contact label,
+.light-mode #contact input,
+.light-mode #contact textarea {
+    color: black !important;
+}
+
+/* Default (non-light-mode) text color for form elements */
+#contact h2,
+#contact h4,
+#contact p,
+#contact label,
+#contact input,
+#contact textarea {
+    color: white !important;
+}
 /* Our Services section: Make card images fill container */
 
 /* Force light background for Our Services cards in all modes */
@@ -178,19 +216,7 @@
     color: #3fa1ff;
     font-weight: 600;
 }
-.contact-form input,
-.contact-form textarea {
-    background: #23263a;
-    border: none;
-    border-radius: 6px;
-    padding: 0.8rem 1rem;
-    margin-bottom: 1.2rem;
-    color: #fff;
-    font-size: 1rem;
-    resize: none;
-    outline: none;
-    transition: box-shadow 0.2s;
-}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
     box-shadow: 0 0 0 2px #3fa1ff;
@@ -436,11 +462,10 @@
     }
     /* ...existing code... */
 .light-mode #about .text-white {
-    color: #fff !important;
+    color: black !important;
 }
 
 
-/* ...existing code... */
 
 /* Light mode: Make 'Our Technology Stack' heading lighter */
 .light-mode #technologies h2 {
@@ -543,38 +568,89 @@ header .fa-sun,
 /* ...existing code... */
 
 /* Light mode: Get In Touch section background white, text black */
-.light-mode #contact,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 {
+
+/* Light mode: Get In Touch section and form - match footer style */
+.light-mode #contact {
     background: #fff !important;
 }
-.light-mode #contact h6,
+.light-mode #contact h2,
 .light-mode #contact h4,
 .light-mode #contact p,
-.light-mode #contact label,
-.light-mode #contact input,
-.light-mode #contact textarea,
-.light-mode #contact button,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 h6,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 h4,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 p,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 label,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 input,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 textarea {
-    color: #000 !important;
+.light-mode #contact label {
+    color: #222 !important;
+}
+.light-mode #contact .text-start {
+    background: #222 !important;
+    color: white !important;
+    margin-bottom: 20px;
+}
+
+.light-mode #contact .text-start a img {
+    filter: none !important;
+}
+.light-mode #contact .contact-form {
+    background: #f9fafb !important;
+    color: white !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.light-mode #contact .contact-form label {
+    color: #2563eb !important;
+}
+/* Stronger border for contact form input/textarea in light mode */
+.light-mode #contact .contact-form input,
+.light-mode #contact .contact-form textarea {
     background: #fff !important;
+    color: #222 !important;
+    border: 2px solid #2563eb !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 .text-white {
-    color: #000 !important;
+.light-mode #contact .contact-form input:focus,
+.light-mode #contact .contact-form textarea:focus {
+    border: 2.5px solid #2563eb !important;
+    box-shadow: 0 0 0 3px #2563eb33 !important;
+    outline: none !important;
 }
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 input,
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 textarea {
-    background: #f3f4f6 !important;
-    color: #000 !important;
-    border-color: #e5e7eb !important;
-}
-.light-mode .container.text-center.mx-auto.px-4.bg-black-800 button {
+.light-mode #contact .contact-form button {
     background: #2563eb !important;
     color: #fff !important;
+    border: none;
+}
+.light-mode #contact .contact-form button:hover {
+    background: #1e40af !important;
+}
+.light-mode #contact .contact-info {
+    background: #f3f4f6 !important;
+    color: #222 !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.light-mode #contact .contact-info h2 {
+    color: #2563eb !important;
+}
+.light-mode #contact .contact-info p {
+    color: #222 !important;
+}
+.light-mode #contact .contact-socials img {
+    filter: none !important;
+}
+.light-mode #contact #result {
+    color: #2563eb !important;
+}
+
+/* Always keep Contact Information section dark in both modes */
+#contact .text-start {
+     background: #181b24 !important;
+     color: black !important;
+     border-radius: 12px;
+     padding: 2rem 1.5rem;
+}
+#contact .text-start h4,
+#contact .text-start p,
+#contact .text-start i {
+     color: #fff !important;
+}
+#contact .text-start a img {
+     filter: brightness(0.9) !important;
 }
 
 
@@ -693,4 +769,18 @@ header .fa-sun,
 
 
 
-    
+.dark-mode #contact .contact-form input,
+.dark-mode #contact .contact-form textarea {
+    background: #fff !important;
+    color: #222 !important;
+    border: 2px solid black !important;
+    outline: none !important;
+    box-shadow: none !important;
+    width: 70% !important;
+    max-width: 400px !important;
+}
+
+
+
+
+

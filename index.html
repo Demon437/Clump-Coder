@@ -489,57 +489,58 @@
         <script>
             // Improved 2-row slider logic with gap fix
             const techSlider = document.getElementById('tech-slider');
-            const techSliderWrapper = document.getElementById('tech-slider-wrapper');
-            const techPrev = document.getElementById('tech-prev');
-            const techNext = document.getElementById('tech-next');
-            const techGrid = techSlider.querySelector('.grid');
-            const itemsPerCol = 2; // 2 rows
-            const itemsPerRow = 5; // 5 columns visible at once
-            const itemsPerSlide = itemsPerCol * itemsPerRow;
-            const totalItems = techGrid.children.length;
-            const totalSlides = Math.ceil(totalItems / itemsPerSlide);
-            let currentSlide = 0;
+const techSliderWrapper = document.getElementById('tech-slider-wrapper');
+const techPrev = document.getElementById('tech-prev');
+const techNext = document.getElementById('tech-next');
+const techGrid = techSlider.querySelector('.grid');
+const itemsPerCol = 4; // 2 rows
+const itemsPerRow = 5.5; // 5 columns visible at once
+const itemsPerSlide = itemsPerCol * itemsPerRow;
+const totalItems = techGrid.children.length;
+const totalSlides = Math.ceil(totalItems / itemsPerSlide);
+let currentSlide = 0;
 
-            // Fill last slide with empty placeholders if needed
-            function fillPlaceholders() {
-                const remainder = totalItems % itemsPerSlide;
-                if (remainder !== 0) {
-                    const placeholdersToAdd = itemsPerSlide - remainder;
-                    for (let i = 0; i < placeholdersToAdd; i++) {
-                        const placeholder = document.createElement('div');
-                        placeholder.className = 'tech-item bg-transparent p-6 rounded-lg text-center border-0 shadow-none';
-                        placeholder.style.visibility = 'hidden';
-                        techGrid.appendChild(placeholder);
-                    }
-                }
-            }
-            fillPlaceholders();
+// Fill last slide with empty placeholders if needed
+function fillPlaceholders() {
+    const remainder = totalItems % itemsPerSlide;
+    if (remainder !== 0) {
+        const placeholdersToAdd = itemsPerSlide - remainder;
+        for (let i = 0; i < placeholdersToAdd; i++) {
+            const placeholder = document.createElement('div');
+            placeholder.className = 'tech-item bg-transparent p-6 rounded-lg text-center border-0 shadow-none';
+            placeholder.style.visibility = 'hidden';
+            techGrid.appendChild(placeholder);
+        }
+    }
+}
+fillPlaceholders();
 
-            function updateSlider() {
-                // Calculate width of one column
-                const colWidth = techGrid.children[0].offsetWidth + 32; // 32px gap
-                const slideWidth = colWidth * itemsPerRow;
-                techSlider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-            }
+function updateSlider() {
+    const itemWidth = techGrid.children[0].offsetWidth;
+    const style = window.getComputedStyle(techGrid);
+    const gap = parseInt(style.columnGap) || 32;
+    const slideWidth = (itemWidth * itemsPerRow) + (gap * (itemsPerRow - 1));
+    techSlider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+}
 
-            techPrev.addEventListener('click', () => {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                } else {
-                    currentSlide = totalSlides - 1; // Loop to last slide
-                }
-                updateSlider();
-            });
-            techNext.addEventListener('click', () => {
-                if (currentSlide < totalSlides - 1) {
-                    currentSlide++;
-                } else {
-                    currentSlide = 0; // Loop to first slide
-                }
-                updateSlider();
-            });
-            window.addEventListener('resize', updateSlider);
-            updateSlider();
+techPrev.addEventListener('click', () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+    } else {
+        currentSlide = totalSlides - 1; // Loop to last slide
+    }
+    updateSlider();
+});
+techNext.addEventListener('click', () => {
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+    } else {
+        currentSlide = 0; // Loop to first slide
+    }
+    updateSlider();
+});
+window.addEventListener('resize', updateSlider);
+updateSlider();
         </script>
 
     <!-- Portfolio Section -->

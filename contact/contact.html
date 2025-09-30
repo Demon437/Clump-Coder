@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Smashing InfoLabs (Dark Theme with Neon Hover)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Dark Theme */
+        .header-fixed {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        /* Style to ensure the map takes full screen width */
+        .full-width-map-container {
+            width: 100vw; 
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw; 
+            margin-right: -50vw; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.1); 
+        }
+
+        /* Custom neon effect for focus (Tailwind utility classes are used for simplicity) */
+        /* For a more explicit "blur" or "glow" look, custom CSS might be needed for ::before/::after pseudos */
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-800">
+
+    <header class="bg-transparent shadow-md fixed w-full z-20 backdrop-blur-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-right space-x-2">
+                <img src="https://unsplash.com/photos/a-computer-screen-with-a-picture-of-a-woman-on-it--mdDsvDVmZY"
+                    alt="ClumpCoder Solutions logo featuring interconnected gears and circuit patterns in blue and green colors representing technology and innovation"
+                    class="h-10 w-10">
+                <h1
+                    class="text-2xl font-bold bg-black; from-green-400 via-blue-500 to-purple-600 bg-clip-text text-blue-400">
+                    ClumpCoder
+                </h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-blue-600 transition"><b>Home</b></a>
+                <a href="#services" class="text-white hover:text-blue-600 transition"><b>Services</b></a>
+                <a href="#about" class="text-white hover:text-blue-600 transition"><b>About</b></a>
+                <a href="#portfolio" class="text-white hover:text-blue-600 transition"><b>Portfolio</b></a>
+                <a href="career.html" class="text-white hover:text-blue-600 transition"><b>Career</b></a>
+                <a href="#contact" class="text-white hover:text-blue-600 transition"><b>Contact</b></a>
+            </nav>
+            <button id="mobile-menu-toggle" class="md:hidden text-gray-700"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 border border-gray-700 rounded-lg shadow-2xl overflow-hidden mt-12">
+            
+            <div class="lg:order-1 order-2 bg-gray-700">
+                <img src="https://plus.unsplash.com/premium_photo-1684761949512-fab7ef8a3b3c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover opacity-90">
+            </div>
+            
+            <div class="lg:order-2 order-1 bg-gray-800 p-8">
+                <h2 class="text-3xl font-extrabold text-white mb-6">Get in Touch</h2>
+                
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label for="first-name" class="block text-sm font-medium text-gray-300">First Name</label>
+                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" required
+                            class="mt-1 block w-full border border-gray-600 rounded-md shadow-sm p-3 bg-gray-700 text-white placeholder-gray-400 
+focus:ring-sky-500 focus:ring-opacity-80 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 
+focus:outline-none focus:border-transparent transition duration-200 ease-in-out">
+                    </div>
+                    <div>
+                        <label for="last-name" class="block text-sm font-medium text-gray-300">Last Name</label>
+                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" required
+                            class="mt-1 block w-full border border-gray-600 rounded-md shadow-sm p-3 bg-gray-700 text-white placeholder-gray-400 
+focus:ring-sky-500 focus:ring-opacity-80 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 
+focus:outline-none focus:border-transparent transition duration-200 ease-in-out">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300">Email Address</label>
+                        <input type="email" name="email" id="email" autocomplete="email" required
+                            class="mt-1 block w-full border border-gray-600 rounded-md shadow-sm p-3 bg-gray-700 text-white placeholder-gray-400 
+focus:ring-sky-500 focus:ring-opacity-80 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 
+focus:outline-none focus:border-transparent transition duration-200 ease-in-out">
+                    </div>
+                    <div>
+                        <label for="address" class="block text-sm font-medium text-gray-300">Address</label>
+                        <input type="text" name="address" id="address" autocomplete="street-address" 
+                            class="mt-1 block w-full border border-gray-600 rounded-md shadow-sm p-3 bg-gray-700 text-white placeholder-gray-400 
+focus:ring-sky-500 focus:ring-opacity-80 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 
+focus:outline-none focus:border-transparent transition duration-200 ease-in-out">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300">Message (Optional)</label>
+                        <textarea name="message" id="message" rows="4"
+                            class="mt-1 block w-full border border-gray-600 rounded-md shadow-sm p-3 bg-gray-700 text-white placeholder-gray-400 
+focus:ring-sky-500 focus:ring-opacity-80 focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 
+focus:outline-none focus:border-transparent transition duration-200 ease-in-out"></textarea>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <button type="submit"
+                        class="w-full py-3 px-4 border border-transparent rounded-md shadow-lg text-lg font-medium text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400 focus:ring-offset-gray-900 transition duration-150 ease-in-out">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+  
+
+    <section class="bg-blue-800 text-white py-10 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            
+            <div class="flex flex-col items-center p-4">
+                <div class="bg-gray-800 text-teal-400 rounded-full p-3 mb-3 shadow-lg hover:scale-110 transition duration-300 ease-in-out">
+                    <span class="material-icons text-3xl">phone</span>
+                </div>
+                <p class="text-xl font-semibold text-white">
+                    <a href="tel:+917489434407" class="hover:text-teal-400 transition duration-300 ease-in-out">+91 94798-40841</a>
+                </p>
+            </div>
+            
+            <div class="flex flex-col items-center p-4">
+                <div class="bg-gray-800 text-teal-400 rounded-full p-3 mb-3 shadow-lg hover:scale-110 transition duration-300 ease-in-out">
+                    <span class="material-icons text-3xl">email</span>
+                </div>
+                <p class="text-xl font-semibold text-white">
+                    <a href="mailto:clumpcoder@gmail.com" class="hover:text-teal-400 transition duration-300 ease-in-out">clumpcoder@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center p-4">
+                <div class="bg-gray-800 text-teal-400 rounded-full p-3 mb-3 shadow-lg hover:scale-110 transition duration-300 ease-in-out">
+                    <span class="material-icons text-3xl">location_on</span>
+                </div>
+                <p class="text-xl font-semibold text-white">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3727457765403!2d75.87110847501972!3d22.714382927759416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd40f16f9f4b%3A0x1628300439af6dca!2sClumpCoder!5e0!3m2!1sen!2sin!4v1757060738207!5m2!1sen!2sin" target="_blank" class="hover:text-teal-400 transition duration-300 ease-in-out">411 President Tower, Madhumilan Square, Indore</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-900">
+        <h2 class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-3xl font-extrabold text-white mb-6">Find Our Location</h2>
+        
+        <div class="full-width-map-container relative h-[400px]">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.3727457765403!2d75.87110847501972!3d22.714382927759416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd40f16f9f4b%3A0x1628300439af6dca!2sClumpCoder!5e0!3m2!1sen!2sin!4v1757060738207!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="absolute inset-0" 
+                title="Full Screen Location Map"
+            ></iframe>
+            </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Clumpcoder IT Solutions</h4>
+                    <p class="text-white">Innovating with technology since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+                        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+                        <li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+                        <li><a href="career.html" class="hover:text-blue-400">Career</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-400">Cloud Solutions</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Cybersecurity</a></li>
+                        <li><a href="#" class="hover:text-blue-400">Software Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Subscribe</h4>
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full px-3 py-2 rounded-md bg-gray-700 text-white mb-2">
+                    <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded btn-hover">Subscribe</button>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p>© 2024 ClumpCoder Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
