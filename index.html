@@ -17,6 +17,7 @@
   
 </head>
 
+
 <body class="bg-black text-gray-900 bg-black" style="width: 100%;">
     <!-- Light mode animation indicator -->
     <div id="light-mode-indicator" style="display:none; position:fixed; top:30px; left:50%; transform:translateX(-50%); z-index:9999;">
@@ -166,6 +167,11 @@
     .light-mode .text-white { color: #222 !important; }
     .light-mode .bg-black, .light-mode .bg-gray-900 { background: #fff !important; }
     /* Add more overrides as needed for your design */
+
+     .light-mode #dynamic,
+    .light-mode #dynami-text {
+        color: white !important;
+    }
 </style>
 
 
@@ -175,7 +181,7 @@
         style="background-color:#111">
         <!-- Full-screen background video for immersive tech experience -->
         <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0 tech-video">
-            <source src="images/Clumbcoder.mp4" type="video/mp4" />
+            <source src="images/Clumpcode.mp4" type="video/mp4" />
             <!-- Fallback description for technology-themed background video -->
             Your browser does not support the video tag. This is a technology-themed background video showcasing
             advanced computer circuits, flowing data streams, animated software code, cloud architecture icons, and AI
@@ -191,13 +197,13 @@
         <!-- Content layered on top of the background video -->
         <div
             class="relative z-10 text-center text-white p-6 bg-gray-50 bg-opacity-10 rounded-lg max-w-2xl mx-auto animate-fadeInUp">
-            <h1 class="text-4xl font-extrabold mb-4 drop-shadow-lg fade-in-out color">
+            <h1 class="text-4xl font-extrabold mb-4 drop-shadow-lg fade-in-out color" id="dynamic">
                 ClumpCoder is a multi-faceted tech company focused on web, mobile, e-commerce, and AI development
                 solutions
             </h1>
 
             </h1>
-            <p class="text-lg mb-6 drop-shadow-md">We build more than technology—we build momentum.
+            <p class="text-lg mb-6 drop-shadow-md" id="dynami-text">We build more than technology—we build momentum.
                 At our core, we’re an IT powerhouse dedicated to transforming businesses with future-ready digital
                 solutions. Our work is designed to empower brands, accelerate growth, and set new standards of
                 innovation that separate you from the competition.</p>
@@ -254,7 +260,7 @@
                 <div class="service-card-one p-6 text-center bg-gray-900 rounded-lg shadow-md 
             transform transition duration-300 hover:scale-105 hover:shadow-[0_0_30px_#3b82f6] max-w-md group">
                     <i class="fas fa-database text-4xl text-blue-600 mb-4 transition duration-300"></i>
-                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">AI & Machine
+                    <h4 class="text-xl font-semibold mb-2 transition duration-300 text-blue-500 group-hover:scale-110">AI & Machine.light-mode #contact .text-start
                         Learning</h4>
                     <p class="text-white transition duration-300 group-hover:scale-110">Intelligent automation and
                         predictive modeling for smarter decisions.</p>

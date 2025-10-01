@@ -580,9 +580,10 @@ header .fa-sun,
     color: #222 !important;
 }
 .light-mode #contact .text-start {
-    background: #222 !important;
-    color: white !important;
+    background: white !important;
+    color: black !important;
     margin-bottom: 20px;
+ 
 }
 
 .light-mode #contact .text-start a img {
@@ -778,6 +779,43 @@ header .fa-sun,
     box-shadow: none !important;
     width: 70% !important;
     max-width: 400px !important;
+}
+
+/* Contact Information light mode styles */
+.light-mode .contact-info h2,
+.light-mode .contact-info h4,
+.light-mode .contact-info p,
+.light-mode .contact-info a,
+.light-mode .contact-info i,
+.light-mode #contact .text-start,
+.light-mode #contact .text-start h4,
+.light-mode #contact .text-start p,
+.light-mode #contact .text-start a,
+.light-mode #contact .text-start i {
+    color: #000 !important;
+    background: #fff !important;
+}
+
+/* Follow Us heading in light mode */
+.light-mode .contact-info .follow-us-heading {
+    color: #000 !important;
+}
+
+/* Contact Information heading in light mode */
+.light-mode #contact .contact-title,
+.light-mode #contact h2 {
+    color: #000 !important;
+}
+
+/* Override any conflicting dark backgrounds */
+.light-mode #contact .text-start {
+    background-color: #fff !important;
+}
+
+/* Ensure social media icons are visible in light mode */
+.light-mode .contact-socials img {
+    filter: none !important;
+    opacity: 0.8;
 }
 
 
